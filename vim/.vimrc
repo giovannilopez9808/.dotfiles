@@ -1,5 +1,8 @@
 syntax on
 
+set relativenumber
+set ignorecase
+set hlsearch 
 set noerrorbells
 filetype on
 set encoding=utf-8
@@ -35,13 +38,20 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'sbdchd/neoformat'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'maximbaz/lightline-ale'
+Plug 'itchyny/lightline.vim'
+Plug 'alvan/vim-closetag'
+Plug 'easymotion/vim-easymotion'
+Plug 'mhinz/vim-signify'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
 let hour=strftime("%H")
 if 6 <= hour && hour < 19
     "colorscheme delek 
-    colorscheme onehalflight
+    "colorscheme onehalflight
+    colorscheme dracula   
     let g:airline_theme='onehalfdark'
 else 
     colorscheme dracula   
@@ -62,6 +72,20 @@ let g:netrw_banner=0
 let g:netrw_winsise=25
 let g:ctrlp_use_caching=0
 
+" vim fugitive
+command! -bang -nargs=? -complete=dir GFiles
+  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
