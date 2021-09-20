@@ -28,7 +28,7 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -43,7 +43,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "python.defaultInterpreterPath": "/usr/bin/python3",
     "editor.fontFamily": "'MesloLGS NF','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "window.zoomLevel": 2,
     "breadcrumbs.enabled": false,
     "terminal.integrated.defaultProfile.linux": "zsh (2)",
+    "window.zoomLevel": 2,
 }

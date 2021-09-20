@@ -103,6 +103,7 @@ noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 let g:vimtex_quickfix_enabled = 0
 autocmd BufWritePre *.py Neoformat
+autocmd BufWritePre *.c Neoformat
 autocmd BufWritePre *.tex Neoformat
 
 let g:python_highlight_all = 1
