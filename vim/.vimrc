@@ -20,6 +20,7 @@ set undofile
 set incsearch
 set wrap linebreak
 set termguicolors
+set laststatus=2
 highlight Comment cterm=bold
 
 packloadall
@@ -87,16 +88,16 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nnoremap <leader>h :wincmd h<CR>
+nnoremap <silent><C-Left> :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <silent><C-Right> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd V<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
-nnoremap <leader>latex :VimtexCompile<CR>
+nnoremap <silent>la :VimtexCompile<CR>
 nnoremap <silent> <leader>gg :YcmCompleter GoTo<CR>
 noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
