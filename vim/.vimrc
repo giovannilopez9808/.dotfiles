@@ -51,8 +51,7 @@ call plug#end()
 let hour=strftime("%H")
 if 6 <= hour && hour < 19
     "colorscheme delek 
-    "colorscheme onehalflight
-    colorscheme dracula   
+    colorscheme onehalflight
     let g:airline_theme='onehalfdark'
 else 
     colorscheme dracula   
@@ -70,7 +69,7 @@ let g:ctrlp_user_commmand=['.git/','git --git-dir=%s/.git ls-files -oc --exclude
 let mapleader=" "
 let g:netrw_browse_split=2
 let g:netrw_banner=0
-let g:netrw_winsise=25
+let g:netrw_winsise=50
 let g:ctrlp_use_caching=0
 
 " vim fugitive
@@ -95,15 +94,15 @@ nnoremap <silent><C-Right> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd V<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <silent> <Leader>+ :vertical resize +5<CR>
-nnoremap <silent> <Leader>- :vertical resize -5<CR>
+nnoremap <silent> <Leader>+ :vertical resize +20<CR>
+nnoremap <silent> <Leader>- :vertical resize -20<CR>
 nnoremap <silent>la :VimtexCompile<CR>
 nnoremap <silent> <leader>gg :YcmCompleter GoTo<CR>
 noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 let g:vimtex_quickfix_enabled = 0
+let g:python_highlight_all = 1
 autocmd BufWritePre *.py Neoformat
 autocmd BufWritePre *.c Neoformat
 autocmd BufWritePre *.tex Neoformat
 
-let g:python_highlight_all = 1
