@@ -45,6 +45,7 @@ Plug 'alvan/vim-closetag'
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -52,6 +53,7 @@ let hour=strftime("%H")
 if 6 <= hour && hour < 19
     "colorscheme delek 
     colorscheme onehalflight
+    colorscheme dracula   
     let g:airline_theme='onehalfdark'
 else 
     colorscheme dracula   
@@ -88,7 +90,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 nnoremap <silent><C-Left> :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
+nnoremap <silent><C-Up> :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <silent><C-Right> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
