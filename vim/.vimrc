@@ -105,6 +105,6 @@ noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 let g:vimtex_quickfix_enabled = 0
 let g:python_highlight_all = 1
 autocmd BufWritePre *.py Neoformat
-autocmd BufWritePre *.c Neoformat
+autocmd BufWritePre *.c,*.h Neoformat
 autocmd BufWritePre *.tex Neoformat
 
