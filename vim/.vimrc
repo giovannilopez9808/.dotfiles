@@ -90,8 +90,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 nnoremap <silent><C-Left> :wincmd h<CR>
-nnoremap <silent><C-Up> :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader><Down> :wincmd j<CR>
+nnoremap <leader><Up> :wincmd k<CR>
 nnoremap <silent><C-Right> :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd V<bar> :Ex <bar> :vertical resize 30<CR>
