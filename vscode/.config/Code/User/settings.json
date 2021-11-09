@@ -1,5 +1,6 @@
 {
     "editor.cursorBlinking": "expand",
+    "security.workspace.trust.enabled": false,
     "editor.cursorStyle": "line",
     "window.menuBarVisibility": "toggle",
     "workbench.statusBar.visible": false,
@@ -46,4 +47,5 @@
     "breadcrumbs.enabled": false,
     "terminal.integrated.defaultProfile.linux": "zsh (2)",
     "window.zoomLevel": 2,
+    "security.workspace.trust.banner": "always",
 }
