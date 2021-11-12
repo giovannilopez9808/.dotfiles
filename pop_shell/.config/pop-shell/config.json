@@ -6,6 +6,9 @@
     },
     {
       "class": "Matplotlib"
+    },
+    {
+      "class": "Wine"
     }
   ],
   "skiptaskbarhidden": [],

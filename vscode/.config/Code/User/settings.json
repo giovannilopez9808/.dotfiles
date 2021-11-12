@@ -46,6 +46,6 @@
     "editor.fontFamily": "'MesloLGS NF','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "breadcrumbs.enabled": false,
     "terminal.integrated.defaultProfile.linux": "zsh (2)",
-    "window.zoomLevel": 3,
+    "window.zoomLevel": 2,
     "security.workspace.trust.banner": "always",
 }

@@ -128,6 +128,12 @@ alias diff="git diff"
 alias python="ipython3"
 alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso'" 
 alias switch="git switch"
+alias mio="wine /usr/bin/Mio.exe &"
+alias mugi="wine /usr/bin/Tsumugi.exe &"
+alias yui="wine /usr/bin/Yui.exe &"
+alias azusa="wine /usr/bin/Azusa.exe &"
+alias table="wine /usr/bin/Table.exe &"
+alias ritsu="wine /usr/bin/Ritsu.exe &"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
