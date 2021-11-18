@@ -19,6 +19,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set mouse=a
 set wrap linebreak
 set termguicolors
 set laststatus=2
@@ -51,9 +52,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 let hour=strftime("%H")
-if 6 <= hour && hour < 19
+if 8 <= hour && hour < 19
     "colorscheme delek 
-    colorscheme onehalflight
+    "colorscheme onehalflight
     colorscheme dracula   
     let g:airline_theme='onehalfdark'
 else 
@@ -90,6 +91,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nnoremap <silent>t :below term<CR>
 nnoremap <silent><C-Left> :wincmd h<CR>
 nnoremap <leader><Down> :wincmd j<CR>
 nnoremap <leader><Up> :wincmd k<CR>
