@@ -9,6 +9,10 @@
     },
     {
       "class": "Wine"
+    },
+    {
+      "class": "R_x11",
+      "title": "R Graphics: Device 2 (ACTIVE)"
     }
   ],
   "skiptaskbarhidden": [],

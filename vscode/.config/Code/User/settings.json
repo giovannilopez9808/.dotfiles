@@ -38,7 +38,7 @@
         "*.ipynb": "jupyter-notebook"
     },
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Dracula Soft",
     "workbench.editor.untitled.hint": "hidden",
     "editor.accessibilitySupport": "off",
     "security.workspace.trust.untrustedFiles": "open",

@@ -11,6 +11,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
+set regexpengine=1
 set nowrap
 set smartcase
 set noswapfile
@@ -101,7 +102,7 @@ nnoremap <silent> <Leader>- :vertical resize -20<CR>
 nnoremap <silent>la :VimtexCompile<CR>
 nnoremap <silent> <leader>gg :YcmCompleter GoTo<CR>
 noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
-
+au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 let g:vimtex_quickfix_enabled = 0
 let g:python_highlight_all = 1
 autocmd BufWritePre *.py Neoformat
