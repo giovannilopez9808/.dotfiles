@@ -135,6 +135,7 @@ alias yui="wine /usr/bin/Yui.exe &"
 alias azusa="wine /usr/bin/Azusa.exe &"
 alias table="wine /usr/bin/Table.exe &"
 alias ritsu="wine /usr/bin/Ritsu.exe &"
+alias enter_el_insurgente="bash ~/.cluster/enter_el_insurgente"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

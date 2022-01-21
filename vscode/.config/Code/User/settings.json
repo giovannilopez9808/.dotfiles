@@ -38,7 +38,7 @@
         "*.ipynb": "jupyter-notebook"
     },
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.colorTheme": "Dracula Soft",
+    "workbench.colorTheme": "Dracula",
     "workbench.editor.untitled.hint": "hidden",
     "editor.accessibilitySupport": "off",
     "security.workspace.trust.untrustedFiles": "open",
@@ -46,6 +46,7 @@
     "editor.fontFamily": "'MesloLGS NF','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "breadcrumbs.enabled": false,
     "terminal.integrated.defaultProfile.linux": "zsh (2)",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 3,
     "security.workspace.trust.banner": "always",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
 }
