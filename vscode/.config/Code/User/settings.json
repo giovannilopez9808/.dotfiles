@@ -1,17 +1,25 @@
 {
     "editor.cursorBlinking": "expand",
     "security.workspace.trust.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#5caeef",
+        "editorBracketHighlight.foreground2": "#dfb976",
+        "editorBracketHighlight.foreground3": "#c172d9",
+        "editorBracketHighlight.foreground4": "#4fb1bc",
+        "editorBracketHighlight.foreground5": "#97c26c",
+        "editorBracketHighlight.foreground6": "#abb2c0",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+    },
     "editor.cursorStyle": "line",
     "window.menuBarVisibility": "toggle",
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": false,
-    "python.pythonPath": "/usr/bin/python3",
     "latex-workshop.view.pdf.viewer": "external",
     "files.autoSave": "off",
     "fortran.gfortranExecutable": "/usr/bin/gfortran",
     "explorer.confirmDelete": false,
     "workbench.startupEditor": "newUntitledFile",
-    "python.showStartPage": false,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
@@ -48,5 +56,4 @@
     "terminal.integrated.defaultProfile.linux": "zsh (2)",
     "window.zoomLevel": 2,
     "security.workspace.trust.banner": "always",
-    "bracket-pair-colorizer-2.depreciation-notice": false,
 }
