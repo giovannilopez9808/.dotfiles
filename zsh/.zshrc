@@ -137,7 +137,10 @@ alias table="wine /usr/bin/Table.exe &"
 alias ritsu="wine /usr/bin/Ritsu.exe &"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias enter_el_insurgente="bash ~/.cluster/enter_el_insurgente"
+alias copy="xclip -selection clipboard < "
 alias mount_el_insurgente="bash ~/.cluster/mount_el_insurgente"
 alias unmount_el_insurgente="bash ~/.cluster/unmount_el_insurgente"
+alias cetes="./.cetes/cetes.py"
+alias cat="batcat"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
