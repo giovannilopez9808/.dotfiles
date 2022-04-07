@@ -7,6 +7,19 @@
     "zenmode/main": true,
     "python-markdown/main": true,
     "code_prettify/autopep8": true,
-    "livemdpreview/livemdpreview": true
+    "livemdpreview/livemdpreview": false,
+    "highlighter/highlighter": false,
+    "highlight_selected_word/main": false,
+    "select_keymap/main": true,
+    "addbefore/main": false
+  },
+  "Notebook": {
+    "Toolbar": false,
+    "Header": false
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
   }
 }
