@@ -104,10 +104,21 @@ nnoremap <silent> <Leader>- :vertical resize -20<CR>
 nnoremap <silent>la :VimtexCompile<CR>
 nnoremap <silent> <leader>gg :YcmCompleter GoTo<CR>
 noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+nnoremap <S-Up> :m-2<CR>
+nnoremap <S-Down> :m+<CR>
+inoremap <S-Up> <Esc>:m-2<CR>
+inoremap <S-Down> <Esc>:m+<CR>
+
+let g:ycm_semantic_triggers = {
+        \ 'tex'  : ['{']
+        \}
 au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 let g:vimtex_quickfix_enabled = 0
 let g:python_highlight_all = 1
+let g:ycm_filetype_whitelist = {'cpp' : 1, 'text' : 1
+            \}
 autocmd BufWritePre *.py Neoformat
 autocmd BufWritePre *.c,*.cpp,*.h Neoformat
 autocmd BufWritePre *.tex Neoformat
+autocmd BufNewFile,BufRead *.tex set filetype=tex
 
