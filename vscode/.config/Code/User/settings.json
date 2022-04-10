@@ -45,7 +45,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "C_Cpp.updateChannel": "Insiders",
     "workbench.colorTheme": "Dracula",
     "workbench.editor.untitled.hint": "hidden",
     "editor.accessibilitySupport": "off",
