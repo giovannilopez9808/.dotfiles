@@ -126,7 +126,7 @@ alias tag='git tag'
 alias newtag='git tag -a'
 alias diff="git diff"
 alias python="ipython3"
-alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso'" 
+alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso' --sort extension" 
 alias switch="git switch"
 alias e="exit"
 alias mio="wine /usr/bin/Mio.exe &"
