@@ -1,58 +1,58 @@
 {
-    "editor.cursorBlinking": "expand",
-    "security.workspace.trust.enabled": false,
-    "editor.bracketPairColorization.enabled": true,
-    "workbench.colorCustomizations": {
-        "editorBracketHighlight.foreground1": "#5caeef",
-        "editorBracketHighlight.foreground2": "#dfb976",
-        "editorBracketHighlight.foreground3": "#c172d9",
-        "editorBracketHighlight.foreground4": "#4fb1bc",
-        "editorBracketHighlight.foreground5": "#97c26c",
-        "editorBracketHighlight.foreground6": "#abb2c0",
-        "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
-    },
-    "editor.cursorStyle": "line",
-    "window.menuBarVisibility": "toggle",
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.visible": false,
-    "latex-workshop.view.pdf.viewer": "external",
-    "files.autoSave": "off",
-    "fortran.gfortranExecutable": "/usr/bin/gfortran",
-    "explorer.confirmDelete": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.wordWrap": "on",
-    "explorer.confirmDragAndDrop": false,
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.suggestSelection": "first",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "python.languageServer": "Pylance",
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.settings.editor": "json",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "workbench.colorTheme": "Dracula",
-    "workbench.editor.untitled.hint": "hidden",
-    "editor.accessibilitySupport": "off",
-    "security.workspace.trust.untrustedFiles": "open",
-    "python.defaultInterpreterPath": "/usr/bin/python3",
-    "editor.fontFamily": "'MesloLGS NF','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "breadcrumbs.enabled": false,
-    "terminal.integrated.defaultProfile.linux": "zsh (2)",
-    "window.zoomLevel": 2,
-    "security.workspace.trust.banner": "always",
+  "editor.cursorBlinking": "expand",
+  "security.workspace.trust.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#5caeef",
+    "editorBracketHighlight.foreground2": "#dfb976",
+    "editorBracketHighlight.foreground3": "#c172d9",
+    "editorBracketHighlight.foreground4": "#4fb1bc",
+    "editorBracketHighlight.foreground5": "#97c26c",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+  },
+  "editor.cursorStyle": "line",
+  "window.menuBarVisibility": "toggle",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "latex-workshop.view.pdf.viewer": "external",
+  "files.autoSave": "off",
+  "fortran.gfortranExecutable": "/usr/bin/gfortran",
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "python.languageServer": "Pylance",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.settings.editor": "json",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.colorTheme": "Dracula",
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.accessibilitySupport": "off",
+  "security.workspace.trust.untrustedFiles": "open",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "editor.fontFamily": "'MesloLGS NF','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "breadcrumbs.enabled": false,
+  "terminal.integrated.defaultProfile.linux": "zsh (2)",
+  "security.workspace.trust.banner": "always",
+  "window.zoomLevel": 2
 }

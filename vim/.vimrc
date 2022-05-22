@@ -1,5 +1,4 @@
 syntax on
-
 set relativenumber
 set ignorecase
 set hlsearch 
@@ -103,6 +102,7 @@ nnoremap <silent> <Leader>+ :vertical resize +20<CR>
 nnoremap <silent> <Leader>- :vertical resize -20<CR>
 nnoremap <silent>la :VimtexCompile<CR>
 nnoremap <silent> <leader>gg :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gd :YcmCompleter GoToDeclaration<CR>
 noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
@@ -117,7 +117,7 @@ let g:vimtex_quickfix_enabled = 0
 let g:python_highlight_all = 1
 let g:ycm_filetype_whitelist = {'cpp' : 1, 'text' : 1
             \}
-autocmd BufWritePre *.py Neoformat
+autocmd BufWrite *.py Neoformat
 autocmd BufWritePre *.c,*.cpp,*.h Neoformat
 autocmd BufWritePre *.tex Neoformat
 autocmd BufNewFile,BufRead *.tex set filetype=tex
