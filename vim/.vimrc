@@ -47,7 +47,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'octol/vim-cpp-enhanced-highlight'
-
+Plug 'tribela/vim-transparent'
 call plug#end()
 
 let hour=strftime("%H")
@@ -67,7 +67,6 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:ctrlp_user_commmand=['.git/','git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 let mapleader=" "
 let g:netrw_browse_split=2
