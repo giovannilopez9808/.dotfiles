@@ -55,5 +55,6 @@
   "terminal.integrated.defaultProfile.linux": "zsh (2)",
   "security.workspace.trust.banner": "always",
   "languageTool.language": "en-US",
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "glassit-linux.opacity": 90
 }
