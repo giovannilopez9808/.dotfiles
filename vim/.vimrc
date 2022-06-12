@@ -1,67 +1,69 @@
-syntax on
-set ignorecase
-set hlsearch 
-set noerrorbells
-filetype on
-set encoding=utf-8
+set undodir=~/.vim/undotree
+highlight Comment cterm=bold
 set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set nu
+filetype plugin indent on
+set encoding=utf-8
 set regexpengine=1
-set nowrap
-set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
-set mouse=a
 set wrap linebreak
 set termguicolors
+set shiftwidth=4
 set laststatus=2
-highlight Comment cterm=bold
-
-packloadall
+set noerrorbells
+set smartindent
+set ignorecase
+set noswapfile
+set incsearch
+set expandtab
+set smartcase
+set hlsearch 
+set undofile
+set nobackup
+filetype on
+set mouse=a
+set nowrap
+syntax on
+set nu
 
 call plug#begin('~/.vim/plugged')
-Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
-Plug 'git@github.com:vim-python/python-syntax.git'
-Plug 'mbbill/undotree'
-Plug 'lervag/vimtex'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'sbdchd/neoformat'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
-Plug 'alvan/vim-closetag'
-Plug 'easymotion/vim-easymotion'
+" Auto close
+Plug 'jiangmiao/auto-pairs'
+" Theme
+Plug 'dracula/vim'
+" Inden lines
+Plug 'Yggdroot/indentLine'
+" Commenter
+Plug 'preservim/nerdcommenter'
+" LSP
+"Plug 'neovim/nvim-lspconfig'
+" Icons
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+" Tree 
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Syntax
+Plug 'sheerun/vim-polyglot'
+" Change on lines
 Plug 'mhinz/vim-signify'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'octol/vim-cpp-enhanced-highlight'
+" Transparent
 Plug 'tribela/vim-transparent'
+" Autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Telescope
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
+Plug 'git@github.com:kien/ctrlp.vim.git'
+" Status bar
+Plug 'itchyny/lightline.vim'
+" Vim
+Plug 'lervag/vimtex'
+" Undotre
+Plug 'mbbill/undotree'
+"
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
-let hour=strftime("%H")
-if 8 <= hour && hour < 19
-    "colorscheme delek 
-    "colorscheme onehalflight
-    colorscheme dracula   
-    let g:airline_theme='onehalfdark'
-else 
-    colorscheme dracula   
-    let g:dracula_colorterm = 0
-endif 
-
-
-
-if executable('rg')
-    let g:rg_derive_root='true'
-endif
-
+colorscheme dracula   
+"let g:airline_theme='onehalfdark'
 
 let mapleader=" "
 let g:netrw_browse_split=2
@@ -69,22 +71,7 @@ let g:netrw_banner=0
 let g:netrw_winsise=50
 let g:ctrlp_use_caching=0
 
-" vim fugitive
-command! -bang -nargs=? -complete=dir GFiles
-  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-nnoremap <silent>t :below term<CR>
 nnoremap <silent><C-Left> :wincmd h<CR>
 nnoremap <leader><Down> :wincmd j<CR>
 nnoremap <leader><Up> :wincmd k<CR>
@@ -95,24 +82,62 @@ nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <silent> <Leader>+ :vertical resize +20<CR>
 nnoremap <silent> <Leader>- :vertical resize -20<CR>
 nnoremap <silent>la :VimtexCompile<CR>
-nnoremap <silent> <leader>gg :YcmCompleter GoTo<CR>
-nnoremap <silent> <leader>gd :YcmCompleter GoToDeclaration<CR>
-noremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
+" Autocomplete
+let g:coc_global_extensions=[
+            \'coc-python',
+            \'coc-vimtex',
+            \]
+" Status bar
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
-let g:ycm_semantic_triggers = {
-        \ 'tex'  : ['{']
-        \}
-au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
+" Tex settings
 let g:vimtex_quickfix_enabled = 0
-let g:python_highlight_all = 1
-let g:ycm_filetype_whitelist = {'cpp' : 1, 'text' : 1
-            \}
-autocmd BufWrite *.py Neoformat
-autocmd BufWritePre *.c,*.cpp,*.h Neoformat
-autocmd BufWritePre *.tex Neoformat
-autocmd BufNewFile,BufRead *.tex set filetype=tex
+let g:vimtex_quickfix_ignore_filters = [
+      \ 'Underfull',
+      \ 'Overfull',
+      \]
+
+let mapleader=" "
+let g:netrw_browse_split=2
+let g:netrw_banner=0
+let g:netrw_winsise=50
+
+
+" Python path
+let g:python3_host_prog="/usr/bin/ipython3"
+
+" Code jump
+nmap <silent> gg <Plug>(coc-definition)
+" Move through windows
+nnoremap <leader><Down> :wincmd j<CR>
+nnoremap <leader><Up> :wincmd k<CR>
+nnoremap <silent><C-Left> :wincmd h<CR>
+nnoremap <silent><C-Right> :wincmd l<CR>
+" Undo
+nnoremap <leader>u :UndotreeShow<CR>
+" Open and close tree
+map <C-b> :NERDTreeToggle<CR>
+" Comment lines
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
+" Open find files
+nnoremap <C-p> :Telescope find_files<CR> 
+" Resize windows
+nnoremap <silent> <Leader>+ :vertical resize +20<CR>
+nnoremap <silent> <Leader>- :vertical resize -20<CR>
+" Compile latex files
+nnoremap <silent>la :VimtexCompile<CR>
+" Move lines
+nnoremap <S-Up> :m-2<CR>
+nnoremap <S-Down> :m+<CR>
+inoremap <S-Up> <Esc>:m-2<CR>
+inoremap <S-Down> <Esc>:m+<CR>
+au BufWrite *.tex :Autoformat
+au BufWrite *.py :Autoformat
 
