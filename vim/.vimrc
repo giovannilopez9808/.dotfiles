@@ -1,5 +1,4 @@
 syntax on
-set relativenumber
 set ignorecase
 set hlsearch 
 set noerrorbells
@@ -27,10 +26,6 @@ highlight Comment cterm=bold
 packloadall
 
 call plug#begin('~/.vim/plugged')
-
-Plug 'jremmen/vim-ripgrep'
-Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
 Plug 'git@github.com:vim-python/python-syntax.git'

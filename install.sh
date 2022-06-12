@@ -7,3 +7,4 @@ stow powerlevel
 stow rofi
 stow vscode
 stow zsh
+stow nvim
