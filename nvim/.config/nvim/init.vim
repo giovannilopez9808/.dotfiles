@@ -90,6 +90,8 @@ let g:netrw_winsise=50
 " Python path
 let g:python3_host_prog="/usr/bin/ipython3"
 
+" Code jump
+nmap <silent> gg <Plug>(coc-definition)
 " Move through windows
 nnoremap <leader><Down> :wincmd j<CR>
 nnoremap <leader><Up> :wincmd k<CR>
