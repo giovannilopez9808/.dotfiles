@@ -2,6 +2,7 @@ set undodir=~/.config/nvim/undotree
 highlight Comment cterm=bold
 set tabstop=4 softtabstop=4
 filetype plugin indent on
+set clipboard=unnamed
 set encoding=utf-8
 set regexpengine=1
 set wrap linebreak
@@ -88,7 +89,7 @@ let g:netrw_winsise=50
 
 
 " Python path
-let g:python3_host_prog="/usr/bin/ipython3"
+let g:python3_host_prog="/usr/bin/python3"
 
 " Code jump
 nmap <silent> gg <Plug>(coc-definition)
@@ -116,5 +117,9 @@ nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
+" Copy and paste
+vmap <C-c> "*y 
+nmap <C-c> "*Y
+nmap <C-v> "*p 
 au BufWrite *.tex :Autoformat
 au BufWrite *.py :Autoformat
