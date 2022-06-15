@@ -1,10 +1,11 @@
 #!/usr/bin/bash
-stow bash
-stow jupyter
-stow kitty
-stow pop_shell
-stow powerlevel
-stow rofi
-stow vscode
-stow zsh
-stow nvim
+stow bash --adopt
+stow jupyter  --adopt
+stow kitty --adopt
+stow pop_shell --adopt
+stow powerlevel --adopt
+stow rofi --adopt
+stow vscode --adopt
+stow zsh --adopt
+stow nvim --adopt
+git checkout *
