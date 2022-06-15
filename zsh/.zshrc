@@ -15,7 +15,7 @@ export PATH=$HOME"/.cargo/bin":$PATH
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -135,7 +135,7 @@ alias yui="wine /usr/bin/Yui.exe &"
 alias azusa="wine /usr/bin/Azusa.exe &"
 alias table="wine /usr/bin/Table.exe &"
 alias ritsu="wine /usr/bin/Ritsu.exe &"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias enter_el_insurgente="bash ~/.cluster/enter_el_insurgente"
 alias copy="xclip -selection clipboard < "
 alias mount_el_insurgente="bash ~/.cluster/mount_el_insurgente"
