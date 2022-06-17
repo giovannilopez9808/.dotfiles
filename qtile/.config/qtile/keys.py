@@ -1,26 +1,5 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
-import subprocess
-
-
-def backlight(action):
-    def f(qtile):
-        brightness = int(subprocess.run(['xbacklight',
-                                         '-get'],
-                                        stdout=subprocess.PIPE).stdout)
-        decision1 = brightness != 1 or action != 'dec'
-        if decision1:
-            decision2 = brightness > 49 and action == 'dec'
-            decision3 = brightness > 39 and action == 'inc'
-            if decision2 or decision3:
-                subprocess.run(['xbacklight',
-                                f'-{action}',
-                                '10'])
-            else:
-                subprocess.run(['xbacklight',
-                                f'-{action}',
-                                '1'])
-    return f
 
 super_key = "mod4"
 alt = 'mod1'
@@ -144,6 +123,9 @@ Key([],
 Key([],
     'XF86MonBrightnessDown',
     lazy.spawn('xbacklight -dec 5')),
+Key(["control"],
+    "h",
+    lazy.hide_show_bar("top"))
 ]
 
 
