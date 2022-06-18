@@ -10,7 +10,8 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=$HOME"/.cargo/bin":$PATH
+export PATH=$PATH:~/.local/bin
+#export PATH=$HOME"/.cargo/bin":$PATH
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -109,8 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias open="xdg-open"
-# git
+#alias open="xdg-open"
+ #git
 alias add="git add"
 alias addup='git add -u'
 alias addall='git add .'
@@ -125,7 +126,7 @@ alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
 alias diff="git diff"
-alias python="ipython3"
+#alias python="ipython"
 alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso' --sort extension" 
 alias switch="git switch"
 alias e="exit"
@@ -141,7 +142,7 @@ alias copy="xclip -selection clipboard < "
 alias mount_el_insurgente="bash ~/.cluster/mount_el_insurgente"
 alias unmount_el_insurgente="bash ~/.cluster/unmount_el_insurgente"
 alias cetes="./.cetes/cetes.py"
-alias cat="batcat"
+alias cat="bat"
 alias doi="doi2bib"
 alias v="nvim"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
