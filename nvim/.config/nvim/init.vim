@@ -52,6 +52,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/popup.nvim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 " Vim
@@ -123,3 +127,5 @@ nmap <C-c> "*Y
 nmap <C-v> "*p 
 au BufWrite *.tex :Autoformat
 au BufWrite *.py :Autoformat
+
+nnoremap <leader>ff :lua require"finders".fd()<cr>
