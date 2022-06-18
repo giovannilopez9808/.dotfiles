@@ -10,10 +10,10 @@ from libqtile.widget.net import Net
 from libqtile.widget.systray import Systray
 from libqtile.widget.clock import Clock
 from libqtile.widget.spacer import Spacer
-
 from colors import gruvbox
 from unicodes import left_half_circle, right_half_circle
 
+from laptopbattery import LaptopBatteryWidget
 bar = Bar([
     left_half_circle(gruvbox['blue']),
     CurrentLayout(
@@ -88,6 +88,7 @@ bar = Bar([
     # background=gruvbox['dark-blue']
     # ),
     # right_half_circle(gruvbox['dark-blue'])
+    LaptopBatteryWidget(),
 ],
 #margin=[5, 5, 5, 5],
 background='#282a36',
