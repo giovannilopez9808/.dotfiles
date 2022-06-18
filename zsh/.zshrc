@@ -126,7 +126,7 @@ alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
 alias diff="git diff"
-#alias python="ipython"
+alias python="ipython"
 alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso' --sort extension" 
 alias switch="git switch"
 alias e="exit"
