@@ -1,19 +1,19 @@
-from libqtile.bar import Bar
-
-from libqtile.widget.groupbox import GroupBox
+from unicodes import left_half_circle, right_half_circle
 from libqtile.widget.currentlayout import CurrentLayout
 from libqtile.widget.window_count import WindowCount
 from libqtile.widget.windowname import WindowName
-from libqtile.widget.cpu import CPU
-from libqtile.widget.memory import Memory
-from libqtile.widget.net import Net
-from libqtile.widget.systray import Systray
-from libqtile.widget.clock import Clock
-from libqtile.widget.spacer import Spacer
-from colors import gruvbox
-from unicodes import left_half_circle, right_half_circle
-
+from libqtile.widget.groupbox import GroupBox
 from laptopbattery import LaptopBatteryWidget
+from libqtile.widget.systray import Systray
+from libqtile.widget.memory import Memory
+from libqtile.widget.spacer import Spacer
+from libqtile.widget.clock import Clock
+from libqtile.widget.cpu import CPU
+from libqtile.widget.net import Net
+from libqtile.bar import Bar
+from colors import gruvbox
+
+
 bar = Bar([
     left_half_circle(gruvbox['blue']),
     CurrentLayout(
@@ -89,6 +89,7 @@ bar = Bar([
     # ),
     # right_half_circle(gruvbox['dark-blue'])
     LaptopBatteryWidget(),
+    # battery(),
 ],
 #margin=[5, 5, 5, 5],
 background='#282a36',

@@ -73,9 +73,9 @@ autostart =[
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
-    'xinput set-prop 11 313 1',
+    'xinput set-prop 16 314 1',
     # Natural scrolling
-    'xinput set-prop 11 321 1',
+    'xinput set-prop 16 291 1',
     # Backgroud
     'feh --bg-fill /home/amadeus/.config/qtile/wallpaper.jpg',
     # Transparency
