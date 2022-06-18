@@ -93,7 +93,7 @@ let g:netrw_winsise=50
 
 
 " Python path
-let g:python3_host_prog="/usr/bin/python3"
+"let g:python3_host_prog="/usr/bin/python3"
 
 " Code jump
 nmap <silent> gg <Plug>(coc-definition)
