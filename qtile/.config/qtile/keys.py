@@ -1,5 +1,13 @@
+from libqtile.log_utils import logger
 from libqtile.config import Key
 from libqtile.lazy import lazy
+
+
+@lazy.function
+def current_workspace(qtile):
+    logger.warning(f"Current workspace {lazy.screen.labelgroup()}")
+    print(f"Current workspace {lazy.screen.labelgroup()}")
+
 
 super_key = "mod4"
 alt = 'mod1'
@@ -105,46 +113,44 @@ keys = [
         'b',
         lazy.spawn('firefox'),
         desc='Open firefox'),
-Key([alt],
-    'a',
-    lazy.spawn('rofi -show drun -show-icons'),
-    desc='Open rofi with applications'),
-Key([alt],
-    's',
-    lazy.spawn('rofi -lines 10 -padding 0 -show search -show-icons -modi search:/bin/rofi-web-search.py -i -p "Search : "'),
-    desc='Open rofi search'),
-Key([alt],
-    'q',
-    lazy.spawn('rofi -lines 10 -padding 0 -show scihub -show-icons -modi scihub:/bin/rofi_scihub.py -i -p "SciHub: "'),
-    desc='Open rofi scihub help'),
-Key([],
-    'XF86MonBrightnessUp',
-    lazy.spawn('xbacklight -inc 5'),
-    desc="Increase ligthness"),
-Key([],
-    'XF86MonBrightnessDown',
-    lazy.spawn('xbacklight -dec 5'),
-    "Descrease ligthness"),
-Key([],
-    "XF86AudioRaiseVolume",
-    lazy.spawn("pactl -- set-sink-volume 0 +10%")
-    ),
-Key([],
-    "XF86AudioLowerVolume",
-    lazy.spawn("pactl -- set-sink-volume 0 -10%")
-    ),
-Key(["control"],
-    "h",
-    lazy.hide_show_bar("top"),
-    desc="Hide top bar"),
-Key([super_key],
-    "Right",
-    lazy.screen.next_group(),
-    desc="Move to next workspace"),
-Key([super_key],
-    "Left",
-    lazy.screen.prev_group(),
-    desc="Move to previous workspace"),
+    Key([alt],
+        'a',
+        lazy.spawn('rofi -show drun -show-icons'),
+        desc='Open rofi with applications'),
+    Key([alt],
+        's',
+        lazy.spawn(
+        'rofi -lines 10 -padding 0 -show search -show-icons -modi search:/bin/rofi-web-search.py -i -p "Search : "'),
+        desc='Open rofi search'),
+    Key([alt],
+        'q',
+        lazy.spawn(
+        'rofi -lines 10 -padding 0 -show scihub -show-icons -modi scihub:/bin/rofi_scihub.py -i -p "SciHub: "'),
+        desc='Open rofi scihub help'),
+    Key([],
+        'XF86MonBrightnessUp',
+        lazy.spawn('xbacklight -inc 5'),
+        desc="Increase ligthness"),
+    Key([],
+        'XF86MonBrightnessDown',
+        lazy.spawn('xbacklight -dec 5'),
+        "Descrease ligthness"),
+    Key([],
+        "XF86AudioRaiseVolume",
+        lazy.spawn("pactl -- set-sink-volume 0 +10%")
+        ),
+    Key([],
+        "XF86AudioLowerVolume",
+        lazy.spawn("pactl -- set-sink-volume 0 -10%")
+        ),
+    Key(["control"],
+        "h",
+        lazy.hide_show_bar("top"),
+        desc="Hide top bar"),
+    Key([super_key],
+        "f",
+        lazy.spawn("nautilus"),),
+    Key([super_key],
+        "p",
+        lazy.function(current_workspace()),),
 ]
-
-
