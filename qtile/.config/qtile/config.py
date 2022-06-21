@@ -1,7 +1,7 @@
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from bar_transparent_rounded import bar
 from libqtile import layout, widget
-from groups import keys,super_key
+from groups import keys, super_key
 from libqtile.lazy import lazy
 from colors import gruvbox
 from os import system
@@ -45,6 +45,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        Match(wm_class="matplotlib")
     ]
 )
 auto_fullscreen = True
@@ -69,19 +70,19 @@ wl_input_rules = None
 wmname = "LG3D"
 
 
-autostart =[
+autostart = [
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    # 'xinput set-prop 16 314 1',
+    'xinput set-prop 16 314 1',
     # HP
-    'xinput set-prop 11 313 1',
+    # 'xinput set-prop 11 313 1',
     # Natural scrolling
     # Lenovo
-    # 'xinput set-prop 16 291 1',
+    'xinput set-prop 16 291 1',
     # HP
-    'xinput set-prop 11 321 1',
+    # 'xinput set-prop 11 321 1',
     # Backgroud
     'feh --bg-fill /home/amadeus/.config/qtile/wallpaper.jpg',
     # Transparency
