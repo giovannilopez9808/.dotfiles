@@ -131,11 +131,11 @@ keys = [
         "Descrease ligthness"),
     Key([],
         "XF86AudioRaiseVolume",
-        lazy.spawn("pactl -- set-sink-volume 0 +10%")
+        lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ +10%"),
         ),
     Key([],
         "XF86AudioLowerVolume",
-        lazy.spawn("pactl -- set-sink-volume 0 -10%")
+        lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ -10%"),
         ),
     Key(["control"],
         "h",
