@@ -3,12 +3,6 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 
 
-@lazy.function
-def current_workspace(qtile):
-    logger.warning(f"Current workspace {lazy.screen.labelgroup()}")
-    print(f"Current workspace {lazy.screen.labelgroup()}")
-
-
 super_key = "mod4"
 alt = 'mod1'
 terminal = '/bin/kitty'
@@ -129,11 +123,11 @@ keys = [
         desc='Open rofi scihub help'),
     Key([],
         'XF86MonBrightnessUp',
-        lazy.spawn('xbacklight -inc 5'),
+        lazy.spawn('brightnessctl set 10%+'),
         desc="Increase ligthness"),
     Key([],
         'XF86MonBrightnessDown',
-        lazy.spawn('xbacklight -dec 5'),
+        lazy.spawn('brightnessctl set 10%-'),
         "Descrease ligthness"),
     Key([],
         "XF86AudioRaiseVolume",
@@ -150,7 +144,4 @@ keys = [
     Key([super_key],
         "f",
         lazy.spawn("nautilus"),),
-    Key([super_key],
-        "p",
-        lazy.function(current_workspace()),),
 ]
