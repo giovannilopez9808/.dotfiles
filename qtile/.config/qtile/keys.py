@@ -6,6 +6,7 @@ from libqtile.lazy import lazy
 super_key = "mod4"
 alt = 'mod1'
 terminal = '/bin/kitty'
+ss_command = "scrot '%Y-%m-%d-%H-%s_screenshot.png' -s -e"
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -144,4 +145,12 @@ keys = [
     Key([super_key],
         "f",
         lazy.spawn("nautilus"),),
+    Key([super_key, "shift"],
+        "Print",
+        lazy.spawn(
+            f"{ss_command} 'xclip -selection clipboard -t image/png -i $f && rm *.png'")
+        ),
+    Key([super_key],
+        "Print",
+        lazy.spawn(f"{ss_command} 'mv *.png ~/Pictures/'")),
 ]

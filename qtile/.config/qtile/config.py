@@ -3,6 +3,7 @@ from bar_transparent_rounded import bar
 from libqtile import layout, widget
 from groups import keys, super_key
 from libqtile.lazy import lazy
+from layouts import layouts
 from colors import gruvbox
 from os import system
 
@@ -75,14 +76,14 @@ autostart = [
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    # 'xinput set-prop 16 314 1',
+    'xinput set-prop 17 309 1',
     # HP
-    'xinput set-prop 11 313 1',
+    # 'xinput set-prop 11 313 1',
     # Natural scrolling
     # Lenovo
-    # 'xinput set-prop 16 291 1',
+    'xinput set-prop 17 286 1',
     # HP
-    'xinput set-prop 11 321 1',
+    # 'xinput set-prop 11 321 1',
     # Backgroud
     'feh --bg-fill /home/amadeus/.config/qtile/wallpaper.jpg',
     # Transparency
