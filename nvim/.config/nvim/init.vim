@@ -4,6 +4,7 @@ set tabstop=4 softtabstop=4
 filetype plugin indent on
 set clipboard=unnamed
 set encoding=utf-8
+set colorcolumn=80
 set regexpengine=1
 set wrap linebreak
 set termguicolors
@@ -64,6 +65,10 @@ Plug 'lervag/vimtex'
 Plug 'mbbill/undotree'
 "
 Plug 'vim-autoformat/vim-autoformat'
+"
+Plug 'ap/vim-css-color'
+"
+Plug 'christianrondeau/vim-base64'
 call plug#end()
 
 lua require('configs')
