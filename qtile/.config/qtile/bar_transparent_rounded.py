@@ -10,6 +10,8 @@ from libqtile.widget.spacer import Spacer
 from libqtile.widget.clock import Clock
 from libqtile.widget.cpu import CPU
 from libqtile.widget.net import Net
+from libqtile.widget import battery
+from libqtile.widget import Wlan
 from libqtile.bar import Bar
 from colors import gruvbox
 
@@ -36,14 +38,14 @@ bar = Bar([
     left_half_circle(gruvbox['cyan']),
     Clock(
         background=gruvbox['cyan'],
-        format=' %Y-%m-%d %I:%M %p'),
+        format=' %Y-%m-%d %I:%M %p'),
     right_half_circle(gruvbox['cyan']),
 
-    Spacer(length=10),
+    Spacer(length=320),
 
     # Prompt(foreground=gruvbox['fg']),
 
-    WindowName(foreground=gruvbox['fg']),
+    # WindowName(foreground=gruvbox['fg']),
 
     left_half_circle(gruvbox['bg']),
     GroupBox(
@@ -58,12 +60,12 @@ bar = Bar([
     ),
     right_half_circle(gruvbox['bg']),
 
-    Spacer(length=100),
+    Spacer(length=410),
 
-    Systray(
-        padding=15,
-        # background='#00000000'
-    ),
+    # Systray(
+    # padding=0,
+    # # background='#00000000'
+    # ),
 
     # Spacer(length=10),
 
@@ -75,7 +77,7 @@ bar = Bar([
 
     # Spacer(length=10),
 
-    #left_half_circle(gruvbox['dark-magenta']),
+    # left_half_circle(gruvbox['dark-magenta']),
     # Memory(
     # format=' {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
     # background=gruvbox['dark-magenta']),
@@ -87,12 +89,15 @@ bar = Bar([
     # Net(
     # background=gruvbox['dark-blue']
     # ),
-    # right_half_circle(gruvbox['dark-blue'])
-    LaptopBatteryWidget(),
     # battery(),
+    LaptopBatteryWidget(),
+    left_half_circle(gruvbox['magenta']),
+    Wlan(background=gruvbox["magenta"],
+         format=" {essid} {percent:2.0%}"),
+    right_half_circle(gruvbox['magenta']),
 ],
-#margin=[5, 5, 5, 5],
-background='#282a36',
-opacity=0.8,
-size=16,
+    #margin=[5, 5, 5, 5],
+    background='#282a36',
+    opacity=0.8,
+    size=16,
 )

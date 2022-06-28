@@ -76,12 +76,12 @@ autostart = [
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    'xinput set-prop 17 309 1',
+    'xinput set-prop "ALPS121E:00 044E:120A Touchpad" "libinput Tapping Enabled" 1',
     # HP
     # 'xinput set-prop 11 313 1',
     # Natural scrolling
     # Lenovo
-    'xinput set-prop 17 286 1',
+    'xinput set-prop "ALPS121E:00 044E:120A Touchpad" "libinput Natural Scrolling Enabled" 1',
     # HP
     # 'xinput set-prop 11 321 1',
     # Backgroud
