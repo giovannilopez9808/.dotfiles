@@ -70,20 +70,28 @@ wl_input_rules = None
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
 
-
+xinput = "xinput set-prop '{}' '{}' 1"
+lenovo = "ALPS121E:00 044E:120A Touchpad"
+hp = "SynPS/2 Synaptics TouchPad"
+tap = "libinput Tapping Enabled"
+scroll = "libinput Natural Scrolling Enabled"
 autostart = [
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    'xinput set-prop "ALPS121E:00 044E:120A Touchpad" "libinput Tapping Enabled" 1',
+    # xinput.format(lenovo,
+    # tap),
     # HP
-    # 'xinput set-prop 11 313 1',
+    xinput.format(hp,
+                  tap),
     # Natural scrolling
     # Lenovo
-    'xinput set-prop "ALPS121E:00 044E:120A Touchpad" "libinput Natural Scrolling Enabled" 1',
+    # xinput.format(lenovo,
+    # scroll)
     # HP
-    # 'xinput set-prop 11 321 1',
+    xinput.format(hp,
+                  scroll),
     # Backgroud
     'feh --bg-fill /home/amadeus/.config/qtile/wallpaper.jpg',
     # Transparency
