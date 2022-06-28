@@ -112,6 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias open='sh -c '\''xdg-open "$@" &'\'' _'
 alias files='sh -c '\''nautilus "$@" &'\'' _'
+alias copydoi='sh -c '\''doi2bib "$@" | xclip -selection clipboard'\'' _'
  #git
 alias add="git add"
 alias addup='git add -u'
@@ -143,8 +144,10 @@ alias copy="xclip -selection clipboard < "
 alias mount_el_insurgente="bash ~/.cluster/mount_el_insurgente"
 alias unmount_el_insurgente="bash ~/.cluster/unmount_el_insurgente"
 alias cetes="./.cetes/cetes.py"
-alias cat="bat"
 alias doi="doi2bib"
 alias v="nvim"
+alias tags="ctags -R ."
+alias neofetch="neofetch | lolcat"
+alias cat='sh -c '\''bat "$@" --theme Dracula'\'' _'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
