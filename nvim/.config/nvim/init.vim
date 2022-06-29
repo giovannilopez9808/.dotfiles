@@ -69,6 +69,8 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'ap/vim-css-color'
 "
 Plug 'christianrondeau/vim-base64'
+"
+Plug 'junegunn/rainbow_parentheses.vim'
 call plug#end()
 
 lua require('configs')
@@ -133,7 +135,10 @@ inoremap <C-s> <Esc>:w<CR>
 vmap <C-c> "*y 
 nmap <C-c> "*Y
 nmap <C-v> "*p 
+"
+let g:rainbow#pairs = [['(', ')'], ['[', ']'],['{','}'],]
+au VimEnter * RainbowParentheses
+"
 au BufWrite *.tex :Autoformat
 au BufWrite *.py :Autoformat
-
 nnoremap <leader>ff :lua require"finders".fd()<cr>
