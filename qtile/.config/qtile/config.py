@@ -80,22 +80,22 @@ autostart = [
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    # xinput.format(lenovo,
-    # tap),
-    # HP
-    xinput.format(hp,
+    xinput.format(lenovo,
                   tap),
-    # Natural scrolling
-    # Lenovo
-    # xinput.format(lenovo,
-    # scroll)
     # HP
-    xinput.format(hp,
+    # xinput.format(hp,
+    # tap),
+    # # Natural scrolling
+    # Lenovo
+    xinput.format(lenovo,
                   scroll),
+    # HP
+    # xinput.format(hp,
+    # scroll),
     # Backgroud
     'feh --bg-fill /home/amadeus/.config/qtile/wallpaper.jpg',
     # Transparency
-    'picom --no-vsync &'
+    'picom --experimental-backends --backend glx &'
 ]
 
 for command in autostart:
