@@ -110,8 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias open='sh -c '\''xdg-open "$@" &'\'' _'
-alias files='sh -c '\''nautilus "$@" &'\'' _'
+alias open='sh -c '\''xdg-open "$@" >> /dev/null &'\'' _'
+alias files='sh -c '\''nautilus "$@" >> /dev/null &'\'' _'
 alias copydoi='sh -c '\''doi2bib "$@" | xclip -selection clipboard'\'' _'
  #git
 alias add="git add"
