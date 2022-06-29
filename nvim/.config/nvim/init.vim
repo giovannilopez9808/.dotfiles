@@ -126,6 +126,9 @@ nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
+" Save 
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
 " Copy and paste
 vmap <C-c> "*y 
 nmap <C-c> "*Y
