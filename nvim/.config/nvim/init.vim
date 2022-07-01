@@ -92,7 +92,8 @@ let g:vimtex_quickfix_ignore_filters = [
       \ 'Underfull',
       \ 'Overfull',
       \]
-
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let mapleader=" "
 let g:netrw_browse_split=2
 let g:netrw_banner=0
