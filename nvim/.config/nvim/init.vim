@@ -58,7 +58,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/popup.nvim'
 " Status bar
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'itchyny/lightline.vim'
 " Vim
 Plug 'lervag/vimtex'
 " Undotre
@@ -71,6 +73,8 @@ Plug 'ap/vim-css-color'
 Plug 'christianrondeau/vim-base64'
 "
 Plug 'junegunn/rainbow_parentheses.vim'
+"
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 lua require('configs')
@@ -82,10 +86,22 @@ let g:coc_global_extensions=[
             \'coc-vimtex',
             \]
 " Status bar
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
+"let g:lightline = {
+      "\ 'colorscheme': 'wombat',
+      "\ }
+ if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+let g:airline_theme="deus"
+let g:airline_powerline_fonts = 1
+let g:airline_symbols.linenr = '|'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.colnr = '|'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#languageclient#enabled = 1
+let g:airline#extensions#coc#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled=0
 " Tex settings
 let g:vimtex_quickfix_enabled = 0
 let g:vimtex_quickfix_ignore_filters = [
@@ -95,9 +111,9 @@ let g:vimtex_quickfix_ignore_filters = [
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let mapleader=" "
-let g:netrw_browse_split=2
-let g:netrw_banner=0
-let g:netrw_winsise=50
+"let g:netrw_browse_split=2
+"let g:netrw_banner=0
+"let g:netrw_winsise=50
 
 
 " Python path
