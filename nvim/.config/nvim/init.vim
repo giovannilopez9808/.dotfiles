@@ -148,11 +148,14 @@ inoremap <S-Down> <Esc>:m+<CR>
 " Save 
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
-" Copy and paste
+" Close
+nnoremap <C-q> :wq<CR>
+inoremap <C-q> <Esc>:wq<CR>
+"Copy and paste
 vmap <C-c> "*y 
 nmap <C-c> "*Y
 nmap <C-v> "*p 
-"
+
 let g:rainbow#pairs = [['(', ')'], ['[', ']'],['{','}'],]
 au VimEnter * RainbowParentheses
 "
