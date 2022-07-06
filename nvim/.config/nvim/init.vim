@@ -75,6 +75,8 @@ Plug 'christianrondeau/vim-base64'
 Plug 'junegunn/rainbow_parentheses.vim'
 "
 Plug 'tpope/vim-fugitive'
+"
+Plug 'mechatroner/rainbow_csv'
 call plug#end()
 
 lua require('configs')
@@ -118,7 +120,6 @@ let mapleader=" "
 
 " Python path
 "let g:python3_host_prog="/usr/bin/python3"
-
 " Code jump
 nmap <silent> gg <Plug>(coc-definition)
 " Move through windows
@@ -154,11 +155,10 @@ inoremap <C-q> <Esc>:wq<CR>
 "Copy and paste
 vmap <C-c> "*y 
 nmap <C-c> "*Y
-nmap <C-v> "*p 
-
+nmap <C-v> "*p
+"
 let g:rainbow#pairs = [['(', ')'], ['[', ']'],['{','}'],]
 au VimEnter * RainbowParentheses
 "
 au BufWrite *.tex :Autoformat
 au BufWrite *.py :Autoformat
-nnoremap <leader>ff :lua require"finders".fd()<cr>
