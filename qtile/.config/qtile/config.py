@@ -8,7 +8,7 @@ from colors import gruvbox
 from os import system
 
 widget_defaults = dict(
-    font="Dejavu",
+    font="Hack-Regular",
     fontsize=12,
     padding=1,
 )

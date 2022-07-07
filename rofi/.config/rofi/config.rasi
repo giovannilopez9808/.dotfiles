@@ -1,0 +1,7 @@
+//@theme "/usr/share/rofi/themes/onedark.rasi"
+@theme "/usr/share/rofi/themes/onedark.rasi"
+configuration{
+    show-icons: true;
+    icon-theme: "Flat-Remix-Blue-Dark";
+}
+element-icon { size: 1.65ch ; }

@@ -148,7 +148,8 @@ alias cetes="./.cetes/cetes.py"
 alias doi="doi2bib"
 alias v="nvim"
 alias tags="ctags -R ."
-alias neofetch="neofetch | lolcat"
+#alias neofetch="neofetch | lolcat"
 alias cat='sh -c '\''bat "$@" --theme Dracula'\'' _'
+alias check="vulture"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
