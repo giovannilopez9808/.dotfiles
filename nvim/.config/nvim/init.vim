@@ -22,7 +22,7 @@ set undofile
 set nobackup
 filetype on
 set mouse=a
-set nowrap
+set wrap
 syntax on
 set nu
 
@@ -113,6 +113,7 @@ let g:vimtex_quickfix_ignore_filters = [
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let mapleader=" "
+let g:tex_flavor = "latex"
 "let g:netrw_browse_split=2
 "let g:netrw_banner=0
 "let g:netrw_winsise=50
@@ -120,8 +121,10 @@ let mapleader=" "
 
 " Python path
 "let g:python3_host_prog="/usr/bin/python3"
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 " Code jump
 nmap <silent> gg <Plug>(coc-definition)
+inoremap <silent><expr> <C-space> coc#refresh()
 " Move through windows
 nnoremap <leader><Down> :wincmd j<CR>
 nnoremap <leader><Up> :wincmd k<CR>
