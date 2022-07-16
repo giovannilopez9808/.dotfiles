@@ -1,12 +1,29 @@
-from libqtile.log_utils import logger
 from libqtile.config import Key
 from libqtile.lazy import lazy
+
+
+def window_to_previous_screen(qtile, switch_group=False, switch_screen=True):
+    i = qtile.screens.index(qtile.current_screen)
+    if i != 0:
+        group = qtile.screens[i - 1].group.name
+        qtile.current_window.togroup(group, switch_group=switch_group)
+        if switch_screen:
+            qtile.cmd_to_screen(i - 1)
+
+
+def window_to_next_screen(qtile, switch_group=False, switch_screen=True):
+    i = qtile.screens.index(qtile.current_screen)
+    if i + 1 != len(qtile.screens):
+        group = qtile.screens[i + 1].group.name
+        qtile.current_window.togroup(group, switch_group=switch_group)
+        if switch_screen:
+            qtile.cmd_to_screen(i + 1)
 
 
 super_key = "mod4"
 alt = 'mod1'
 terminal = '/bin/kitty'
-ss_command = "scrot '%Y-%m-%d-%H-%s_screenshot.png' -s -e"
+ss_command = "scrot '%Y-%m-%d-%H-%s_screenshot.png' -s --freeze -e"
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -27,10 +44,10 @@ keys = [
         "Up",
         lazy.layout.up(),
         desc="Move focus up"),
-    Key(["control"],
-        "space",
-        lazy.layout.next(),
-        desc="Move window focus to other window"),
+    # Key(["control"],
+    # "space",
+    # lazy.layout.next(),
+    # desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([super_key, "shift"],
@@ -115,12 +132,12 @@ keys = [
     Key([alt],
         's',
         lazy.spawn(
-        'rofi -lines 10 -padding 0 -show search -show-icons -modi search:/bin/rofi-web-search.py -i -p "Search : "'),
+        'rofi -lines 10 -padding 0 -show Search -show-icons -modi Search:/bin/rofi-web-search.py -i -p "Search : "'),
         desc='Open rofi search'),
     Key([alt],
         'q',
         lazy.spawn(
-        'rofi -lines 10 -padding 0 -show scihub -show-icons -modi scihub:/bin/rofi_scihub.py -i -p "SciHub: "'),
+        'rofi -lines 10 -padding 0 -show SciHub -show-icons -modi SciHub:/bin/rofi_scihub.py -i -p "SciHub: "'),
         desc='Open rofi scihub help'),
     Key([],
         'XF86MonBrightnessUp',
@@ -153,4 +170,16 @@ keys = [
     Key([super_key],
         "Print",
         lazy.spawn(f"{ss_command} 'mv *.png ~/Pictures/'")),
+    Key([super_key],
+        "Left",
+        lazy.to_screen(0)),
+    Key([super_key],
+        "Right",
+        lazy.to_screen(1)),
+    Key([super_key, alt],
+        "Right",
+        lazy.function(window_to_next_screen)),
+    Key([super_key, alt],
+        "Left",
+        lazy.function(window_to_previous_screen)),
 ]

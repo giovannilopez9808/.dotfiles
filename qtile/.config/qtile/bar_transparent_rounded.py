@@ -1,16 +1,9 @@
 from unicodes import left_half_circle, right_half_circle
 from libqtile.widget.currentlayout import CurrentLayout
-from libqtile.widget.window_count import WindowCount
-from libqtile.widget.windowname import WindowName
 from libqtile.widget.groupbox import GroupBox
 from laptopbattery import LaptopBatteryWidget
-from libqtile.widget.systray import Systray
-from libqtile.widget.memory import Memory
 from libqtile.widget.spacer import Spacer
 from libqtile.widget.clock import Clock
-from libqtile.widget.cpu import CPU
-from libqtile.widget.net import Net
-from libqtile.widget import battery
 from libqtile.widget import Wlan
 from libqtile.bar import Bar
 from colors import gruvbox
@@ -96,7 +89,7 @@ bar = Bar([
          format=" {essid} {percent:2.0%}"),
     right_half_circle(gruvbox['magenta']),
 ],
-    #margin=[5, 5, 5, 5],
+    # margin=[5, 5, 5, 5],
     background='#282a36',
     opacity=0.8,
     size=16,

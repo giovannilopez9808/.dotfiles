@@ -8,13 +8,14 @@ from colors import gruvbox
 from os import system
 
 widget_defaults = dict(
-    font="Hack-Regular",
+    font="MesloLGS NF Regular",
     fontsize=12,
     padding=1,
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [Screen(top=bar)]
+screens = [Screen(top=bar),
+           Screen()]
 
 # Drag floating layouts.
 mouse = [
