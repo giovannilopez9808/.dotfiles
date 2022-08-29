@@ -110,8 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias open='sh -c '\''xdg-open "$@" >> /dev/null &'\'' _'
-alias files='sh -c '\''nautilus "$@" >> /dev/null &'\'' _'
+alias open='sh -c '\''xdg-open "$@" &'\'' _'
+alias files='sh -c '\''thunar "$@" &'\'' _'
 alias copydoi='sh -c '\''doi2bib "$@" | xclip -selection clipboard'\'' _'
  #git
 alias add="git add"
@@ -124,7 +124,7 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias stat='git status -s'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
 alias diff="git diff"

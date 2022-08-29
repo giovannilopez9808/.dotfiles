@@ -77,6 +77,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-fugitive'
 "
 Plug 'mechatroner/rainbow_csv'
+"
 call plug#end()
 
 lua require('configs')

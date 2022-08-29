@@ -161,7 +161,7 @@ keys = [
         desc="Hide top bar"),
     Key([super_key],
         "f",
-        lazy.spawn("nautilus"),),
+        lazy.spawn("thunar"),),
     Key([super_key, "shift"],
         "Print",
         lazy.spawn(

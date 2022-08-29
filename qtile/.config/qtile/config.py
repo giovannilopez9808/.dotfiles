@@ -94,7 +94,7 @@ autostart = [
     # xinput.format(hp,
     # scroll),
     # Backgroud
-    'feh --bg-fill /home/amadeus/.config/qtile/wallpaper.jpg',
+    'feh --bg-fill /home/amadeus/.config/qtile/call.png',
     # Transparency
     'picom --experimental-backends --backend glx &'
 ]
