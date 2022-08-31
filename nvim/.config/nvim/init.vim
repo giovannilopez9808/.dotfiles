@@ -38,10 +38,7 @@ Plug 'preservim/nerdcommenter'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 " Icons
-Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-" Tree 
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Syntax
 Plug 'sheerun/vim-polyglot'
 " Change on lines
@@ -60,7 +57,6 @@ Plug 'nvim-lua/popup.nvim'
 " Status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'itchyny/lightline.vim'
 " Vim
 Plug 'lervag/vimtex'
 " Undotre
@@ -115,11 +111,8 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let mapleader=" "
 let g:tex_flavor = "latex"
-"let g:netrw_browse_split=2
-"let g:netrw_banner=0
-"let g:netrw_winsise=50
-
-
+" Autocomplete with a enter
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " Python path
 "let g:python3_host_prog="/usr/bin/python3"
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
@@ -134,7 +127,7 @@ nnoremap <silent><C-Right> :wincmd l<CR>
 " Undo
 nnoremap <leader>u :UndotreeShow<CR>
 " Open and close tree
-map <C-b> :NERDTreeToggle<CR>
+"map <C-b> :NERDTreeToggle<CR>
 " Comment lines
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
