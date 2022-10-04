@@ -2,7 +2,7 @@ set undodir=~/.config/nvim/undotree
 highlight Comment cterm=bold
 set tabstop=4 softtabstop=4
 filetype plugin indent on
-set clipboard=unnamed
+set clipboard=unnamedplus
 set encoding=utf-8
 set colorcolumn=80
 set regexpengine=1
