@@ -74,6 +74,7 @@ Plug 'tpope/vim-fugitive'
 "
 Plug 'mechatroner/rainbow_csv'
 "
+Plug 'preservim/tagbar'
 call plug#end()
 
 lua require('configs')
@@ -153,6 +154,8 @@ inoremap <C-q> <Esc>:wq<CR>
 vmap <C-c> "*y 
 nmap <C-c> "*Y
 nmap <C-v> "*p
+"
+nnoremap <C-b> :TagbarToggle <CR>:wincmd l<CR>
 "
 let g:rainbow#pairs = [['(', ')'], ['[', ']'],['{','}'],]
 au VimEnter * RainbowParentheses

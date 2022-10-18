@@ -152,5 +152,7 @@ alias tags="ctags -R ."
 alias cat='sh -c '\''bat "$@" --theme Dracula'\'' _'
 alias check="vulture"
 alias icat="kitty +kitten icat"
+alias newbranch="bash ~/.gitscripts/newbranch"
+alias deletebranch="bash ~/.gitscripts/deletebranch"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
