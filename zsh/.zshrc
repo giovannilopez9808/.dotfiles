@@ -127,6 +127,7 @@ alias push='git push origin'
 alias stat='git status -s'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
+alias merge="git merge"
 alias diff="git diff"
 alias python="ipython"
 alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso' --sort extension" 
@@ -143,6 +144,7 @@ alias copy="xclip -selection clipboard < "
 alias enter_el_insurgente="bash ~/.cluster/enter_el_insurgente"
 alias enter_el_insurgente_local="bash ~/.cluster/enter_el_insurgente_local"
 alias mount_el_insurgente="bash ~/.cluster/mount_el_insurgente"
+alias mount_el_insurgente_local="bash ~/.cluster/mount_el_insurgente_local"
 alias unmount_el_insurgente="bash ~/.cluster/unmount_el_insurgente"
 alias cetes="./.cetes/cetes.py"
 alias doi="doi2bib"
