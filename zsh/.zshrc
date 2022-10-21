@@ -157,4 +157,6 @@ alias icat="kitty +kitten icat"
 alias newbranch="bash ~/.gitscripts/newbranch"
 alias deletebranch="bash ~/.gitscripts/deletebranch"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+alias tensorflow="source ~/.venv/tensorflow/bin/activate"
+alias pytorch="source ~/.venv/pytorch/bin/activate"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
