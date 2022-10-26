@@ -8,7 +8,7 @@ from colors import gruvbox
 from os import system
 
 widget_defaults = dict(
-    font="MesloLGS NF Regular",
+    font="MesloLGS NF",
     fontsize=12,
     padding=1,
 )
@@ -39,7 +39,8 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
     float_rules=[
-        # Run the utility of `xprop` to see the wm class and name of an X client.
+        # Run the utility of `xprop` to see the wm class and name of an X
+        # client.
         *layout.Floating.default_float_rules,
         Match(wm_class="confirmreset"),  # gitk
         Match(wm_class="makebranch"),  # gitk
@@ -69,32 +70,33 @@ wl_input_rules = None
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "LG3D"
+wmname = "Qtile"
 
 xinput = "xinput set-prop '{}' '{}' 1"
 lenovo = "ALPS121E:00 044E:120A Touchpad"
 hp = "SynPS/2 Synaptics TouchPad"
 tap = "libinput Tapping Enabled"
 scroll = "libinput Natural Scrolling Enabled"
+msi = "CUST0001:00 06CB:CDAD Touchpad"
 autostart = [
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    xinput.format(lenovo,
+    xinput.format(msi,
                   tap),
     # HP
     # xinput.format(hp,
     # tap),
     # # Natural scrolling
     # Lenovo
-    xinput.format(lenovo,
+    xinput.format(msi,
                   scroll),
     # HP
     # xinput.format(hp,
     # scroll),
     # Backgroud
-    'feh --bg-fill /home/amadeus/.config/qtile/call.png',
+    'feh --bg-fill /home/altair/.config/qtile/call.png',
     # Transparency
     'picom --experimental-backends --backend glx &'
 ]

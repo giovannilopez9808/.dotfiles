@@ -2,9 +2,9 @@ from libqtile import layout
 
 layouts = [
     layout.Columns(border_width=1,
-                   border_focus_stack=["#d75f5f",
-                                       "#d75f5f"],
-                   grow_amount=5),
+                   insert_position=1,
+                   border_focus=["#7b2cbf"],
+                   grow_amount=2),
     # layout.Max(),
     # layout.Columns(),
     # layout.Columns(border_focus_stack=["#d75f5f",

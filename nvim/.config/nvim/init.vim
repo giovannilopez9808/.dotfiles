@@ -84,6 +84,7 @@ colorscheme dracula
 let g:coc_global_extensions=[
             \'coc-python',
             \'coc-vimtex',
+            \'coc-json',
             \]
 " Status bar
 "let g:lightline = {

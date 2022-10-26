@@ -22,7 +22,7 @@ def window_to_next_screen(qtile, switch_group=False, switch_screen=True):
 
 super_key = "mod4"
 alt = 'mod1'
-terminal = '/bin/kitty'
+terminal = '/bin/alacritty'
 ss_command = "scrot '%Y-%m-%d-%H-%s_screenshot.png' -s --freeze -e"
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -149,11 +149,11 @@ keys = [
         "Descrease ligthness"),
     Key([],
         "XF86AudioRaiseVolume",
-        lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ +10%"),
+        lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ +2%"),
         ),
     Key([],
         "XF86AudioLowerVolume",
-        lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ -10%"),
+        lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ -2%"),
         ),
     Key(["control"],
         "h",
