@@ -22,8 +22,8 @@ set undofile
 set nobackup
 filetype on
 set mouse=a
-set wrap
 syntax on
+set wrap
 set nu
 
 call plug#begin('~/.config/nvim/plugged')
@@ -163,3 +163,11 @@ au VimEnter * RainbowParentheses
 "
 au BufWrite *.tex :Autoformat
 au BufWrite *.py :Autoformat
+" Return beam on terminal
+augroup RestoreCursorShapeOnExit
+    autocmd!
+    autocmd VimLeave * set guicursor=a:ver20-blinkwait400-blinkoff400-blinkon400
+augroup END
+" shortcut for far.vim find
+nnoremap <C-f>  :Telescope live_grep<cr>
+vnoremap <C-f>  :Telescope live_grep<cr>
