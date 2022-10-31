@@ -1,7 +1,12 @@
-//@theme "/usr/share/rofi/themes/onedark.rasi"
 @theme "/usr/share/rofi/themes/onedark.rasi"
 configuration{
     show-icons: true;
-    icon-theme: "ePapirus-Dark";
+    icon-theme: "Flat-Remix-Blue-Light";
 }
-element-icon { size: 1.65ch ; }
+element-icon {
+    size: 4.00ch;
+}
+element-text {
+    horizontal-align: 0.01;
+    vertical-align: 0.5;
+}
