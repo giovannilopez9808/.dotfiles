@@ -5,6 +5,7 @@ from laptopbattery import LaptopBatteryWidget
 from libqtile.widget.spacer import Spacer
 from libqtile.widget.clock import Clock
 from libqtile.widget.volume import Volume
+from libqtile.widget.battery import Battery
 from colors import gruvbox, nord_fox
 from libqtile.widget import Wlan
 from libqtile.bar import Bar
@@ -81,8 +82,8 @@ bar = Bar([
     # Net(
     # background=gruvbox['dark-blue']
     # ),
-    # battery(),
-    LaptopBatteryWidget(),
+    # Battery(fmt="{percent}"),
+    # LaptopBatteryWidget(),
     left_half_circle(nord_fox['blue']),
     Volume(fmt='墳 {}',
            background=nord_fox['blue']),
