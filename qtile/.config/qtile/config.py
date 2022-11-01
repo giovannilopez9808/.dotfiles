@@ -1,24 +1,11 @@
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from bar_transparent_rounded import bar
+from libqtile import layout, widget
+from groups import keys, super_key
 from libqtile.lazy import lazy
-from libqtile.config import (
-    Screen,
-    Group,
-    Click,
-    Match,
-    Drag,
-    Key,
-)
 from layouts import layouts
 from colors import gruvbox
-from libqtile import (
-    layout,
-    widget
-)
 from os import system
-from groups import (
-    super_key,
-    keys,
-)
 
 widget_defaults = dict(
     font="MesloLGS NF",

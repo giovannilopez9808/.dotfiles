@@ -24,6 +24,7 @@ super_key = "mod4"
 alt = 'mod1'
 terminal = '/bin/alacritty'
 ss_command = "scrot '%Y-%m-%d-%H-%s_screenshot.png' -s --freeze -e"
+rofi = "rofi -lines 10 -padding 0 -show"
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -132,12 +133,12 @@ keys = [
     Key([alt],
         's',
         lazy.spawn(
-        'rofi -lines 10 -padding 0 -show Search -show-icons -modi Search:/bin/rofi-web-search.py -i -p "Search : "'),
+        f'{rofi} Search -show-icons -modi Search:/bin/rofi-web-search.py -i -p "Search : "'),
         desc='Open rofi search'),
     Key([alt],
         'q',
         lazy.spawn(
-        'rofi -lines 10 -padding 0 -show SciHub -show-icons -modi SciHub:/bin/rofi_scihub.py -i -p "SciHub: "'),
+        f'{rofi} SciHub -show-icons -modi SciHub:/bin/rofi_scihub.py -i -p "SciHub: "'),
         desc='Open rofi scihub help'),
     Key([],
         'XF86MonBrightnessUp',
@@ -154,6 +155,14 @@ keys = [
     Key([],
         "XF86AudioLowerVolume",
         lazy.spawn("pactl -- set-sink-volume @DEFAULT_SINK@ -2%"),
+        ),
+    Key([],
+        "XF86AudioMute",
+        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ 1")
+        ),
+    Key(["control"],
+        "XF86AudioMute",
+        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ 0")
         ),
     Key(["control"],
         "h",
