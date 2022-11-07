@@ -9,8 +9,8 @@ from os import system
 
 widget_defaults = dict(
     font="MesloLGS NF",
-    fontsize=12,
-    padding=1,
+    fontsize=8,
+    padding=0.5,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -83,20 +83,20 @@ autostart = [
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    xinput.format(msi,
+    xinput.format(lenovo,
                   tap),
     # HP
     # xinput.format(hp,
     # tap),
     # # Natural scrolling
     # Lenovo
-    xinput.format(msi,
+    xinput.format(lenovo,
                   scroll),
     # HP
     # xinput.format(hp,
     # scroll),
     # Backgroud
-    'feh --bg-fill /home/altair/.config/qtile/call.png',
+    'feh --bg-fill /home/amadeus/.config/qtile/call.png',
     # Transparency
     'picom &'
 ]

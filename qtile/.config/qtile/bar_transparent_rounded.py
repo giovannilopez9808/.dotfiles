@@ -26,7 +26,7 @@ bar = Bar([
     Volume(fmt='墳 {}',
            background=nord_fox['blue']),
     right_half_circle(nord_fox['blue']),
-    Spacer(length=615),
+    Spacer(length=420),
     # Grupos de ventanas
     left_half_circle(gruvbox['bg']),
     GroupBox(
@@ -40,7 +40,7 @@ bar = Bar([
         background=gruvbox['bg']
     ),
     right_half_circle(gruvbox['bg']),
-    Spacer(length=660),
+    Spacer(length=440),
     # Bateria
     LaptopBatteryWidget(),
     # Internet
