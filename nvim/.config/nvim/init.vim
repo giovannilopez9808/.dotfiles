@@ -59,6 +59,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Vim
 Plug 'lervag/vimtex'
+Plug 'sirver/ultisnips'
 " Undotre
 Plug 'mbbill/undotree'
 "
@@ -113,6 +114,9 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let mapleader=" "
 let g:tex_flavor = "latex"
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 " Autocomplete with a enter
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " Python path
