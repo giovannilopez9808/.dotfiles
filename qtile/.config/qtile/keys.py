@@ -128,7 +128,7 @@ keys = [
         desc='Open firefox'),
     Key([alt],
         'a',
-        lazy.spawn('rofi -show drun -show-icons'),
+        lazy.spawn('rofi -show drun -show-icons -display-drun ""'),
         desc='Open rofi with applications'),
     Key([alt],
         's',
@@ -140,6 +140,10 @@ keys = [
         lazy.spawn(
         f'{rofi} SciHub -show-icons -modi SciHub:/bin/rofi_scihub.py -i -p "SciHub: "'),
         desc='Open rofi scihub help'),
+    Key([alt],
+        "z",
+        lazy.spawn(
+        "rofi -show window")),
     Key([],
         'XF86MonBrightnessUp',
         lazy.spawn('brightnessctl set 2%+'),

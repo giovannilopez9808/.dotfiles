@@ -4,7 +4,7 @@ from libqtile import layout, widget
 from groups import keys, super_key
 from libqtile.lazy import lazy
 from layouts import layouts
-from colors import gruvbox
+from colors import dracula
 from os import system
 
 widget_defaults = dict(
@@ -96,9 +96,10 @@ autostart = [
     # xinput.format(hp,
     # scroll),
     # Backgroud
+    # "optimus-manager --switch nvidia",
     'feh --bg-fill /home/altair/.config/qtile/call.png',
     # Transparency
-    'picom &'
+    'picom &',
 ]
 
 for command in autostart:
