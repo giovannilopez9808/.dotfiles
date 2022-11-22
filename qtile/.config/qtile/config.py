@@ -4,7 +4,7 @@ from libqtile import layout, widget
 from groups import keys, super_key
 from libqtile.lazy import lazy
 from layouts import layouts
-from colors import gruvbox
+from colors import dracula
 from os import system
 
 widget_defaults = dict(
@@ -96,7 +96,7 @@ autostart = [
     # xinput.format(hp,
     # scroll),
     # Backgroud
-    'feh --bg-fill /home/amadeus/.config/qtile/call.png',
+    'feh --bg-fill /home/arclight/.config/qtile/call.png',
     # Transparency
     'picom &'
 ]

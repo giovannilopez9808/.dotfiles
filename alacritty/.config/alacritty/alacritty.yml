@@ -22,10 +22,10 @@ font:
     family: MesloLGS NF
     style: Bold Italic
   # Point size
-  size: 9.5
+  size: 11
 
 window: 
-  opacity: 0.95
+  opacity: 1
 
 mouse:
   hide_when_typing: true

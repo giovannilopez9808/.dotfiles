@@ -175,3 +175,7 @@ augroup END
 " shortcut for far.vim find
 nnoremap <C-f>  :Telescope live_grep<cr>
 vnoremap <C-f>  :Telescope live_grep<cr>
+"
+nnoremap <expr> <Down> (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> <Up> (v:count == 0 ? 'gk' : 'k')
+"
