@@ -6,7 +6,7 @@ def left_half_circle(fg_color):
         text='\uE0B6',
         fontsize=28,
         foreground=fg_color,
-        padding=0)
+        padding=-1)
 
 
 def right_half_circle(fg_color):

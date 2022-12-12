@@ -2,14 +2,13 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from bar_transparent_rounded import bar
 from libqtile import layout, widget
 from groups import keys, super_key
-from libqtile.lazy import lazy
 from layouts import layouts
-from colors import gruvbox
+from libqtile.lazy import lazy
 from os import system
 
 widget_defaults = dict(
     font="MesloLGS NF",
-    fontsize=8,
+    fontsize=10,
     padding=0.5,
 )
 extension_defaults = widget_defaults.copy()
@@ -96,7 +95,7 @@ autostart = [
     # xinput.format(hp,
     # scroll),
     # Backgroud
-    'feh --bg-fill /home/amadeus/.config/qtile/call.png',
+    'feh --bg-fill /home/skuld/.config/qtile/monogatari_lake.jpg',
     # Transparency
     'picom &'
 ]
