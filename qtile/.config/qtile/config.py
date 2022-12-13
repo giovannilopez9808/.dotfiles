@@ -14,8 +14,10 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [Screen(top=bar),
-           Screen()]
+screens = [
+    Screen(top=bar),
+    Screen(top=bar),
+]
 
 # Drag floating layouts.
 mouse = [
@@ -97,7 +99,7 @@ autostart = [
     # scroll),
     # Backgroud
     # "optimus-manager --switch nvidia",
-    'feh --bg-fill /home/altair/.config/qtile/call.png',
+    'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/call.png',
     # Transparency
     'picom &',
 ]
