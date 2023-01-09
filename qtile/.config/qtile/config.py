@@ -16,7 +16,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(top=bar),
-    Screen(top=bar),
+    Screen(),
 ]
 
 # Drag floating layouts.
