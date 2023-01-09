@@ -138,7 +138,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 " Open find files
-nnoremap <C-p> :Telescope find_files<CR> 
+inoremap <C-p> <Esc>:Telescope find_files<cr>
+nnoremap <C-p> :Telescope find_files<cr>
 " Resize windows
 nnoremap <silent> <Leader>+ :vertical resize +20<CR>
 nnoremap <silent> <Leader>- :vertical resize -20<CR>
