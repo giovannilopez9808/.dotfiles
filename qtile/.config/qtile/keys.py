@@ -142,8 +142,8 @@ keys = [
         'b',
         lazy.spawn('firefox'),
         desc='Open firefox'),
-    Key([],
-        "F1",
+    Key([super_key],
+        "Space",
         lazy.spawn('rofi -show drun -show-icons -display-drun ""'),
         desc='Open rofi with applications'),
     Key([alt],
@@ -194,7 +194,7 @@ keys = [
     Key([super_key, "shift"],
         "Print",
         lazy.spawn(
-            f"{ss_command} 'xclip -selection clipboard -t image/png -i $f && rm *.png'")
+        f"{ss_command} 'xclip -selection clipboard -t image/png -i $f && rm *.png'")
         ),
     Key([super_key],
         "Print",

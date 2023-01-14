@@ -9,13 +9,13 @@ from os import system
 
 widget_defaults = dict(
     font="MesloLGS NF",
-    fontsize=12,
+    fontsize=8,
     padding=1,
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
-    Screen(top=bar),
+    Screen(),
     Screen(top=bar),
 ]
 
@@ -99,9 +99,9 @@ autostart = [
     # scroll),
     # Backgroud
     # "optimus-manager --switch nvidia",
-    'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/call.png',
+    'feh --bg-fill /home/workstation/.dotfiles/qtile/.config/qtile/call.png',
     # Transparency
-    'picom &',
+    "picom &",
 ]
 
 for command in autostart:
