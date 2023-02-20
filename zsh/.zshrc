@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -159,4 +159,5 @@ alias deletebranch="bash ~/.gitscripts/deletebranch"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 alias tensorflow="source ~/.venv/tensorflow/bin/activate"
 alias pytorch="source ~/.venv/pytorch/bin/activate"
+alias screenkey="screenkey -s small --opacity 0.1 -t 0.25"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
