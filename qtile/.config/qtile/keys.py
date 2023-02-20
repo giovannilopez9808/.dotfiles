@@ -142,7 +142,7 @@ keys = [
         'b',
         lazy.spawn('firefox'),
         desc='Open firefox'),
-    Key(["control"],
+    Key([super_key],
         "Space",
         lazy.spawn('rofi -show drun -show-icons -display-drun ""'),
         desc='Open rofi with applications'),
