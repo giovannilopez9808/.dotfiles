@@ -62,19 +62,17 @@ Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 " Undotre
 Plug 'mbbill/undotree'
-"
+" Autoformat
 Plug 'vim-autoformat/vim-autoformat'
-"
+" Hex colors 
 Plug 'ap/vim-css-color'
-"
+" Dependency
 Plug 'christianrondeau/vim-base64'
-"
+" Rainbow parentheses
 Plug 'junegunn/rainbow_parentheses.vim'
-"
+" 
 Plug 'tpope/vim-fugitive'
-"
-Plug 'mechatroner/rainbow_csv'
-"
+" Tagbar
 Plug 'preservim/tagbar'
 call plug#end()
 
