@@ -111,10 +111,11 @@ let g:vimtex_quickfix_ignore_filters = [
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let mapleader=" "
-let g:tex_flavor = "latex"
+"let g:tex_flavor = "latex"
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:formatdef_latexindent = '"latexindent -"'
 " Autocomplete with a enter
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " Python path
