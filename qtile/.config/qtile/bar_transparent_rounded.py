@@ -2,7 +2,7 @@ from libqtile.widget.groupbox import GroupBox
 from libqtile.widget.spacer import Spacer
 from libqtile.widget.volume import Volume
 from libqtile.widget.clock import Clock
-from libqtile.widget.wlan import Wlan
+# from libqtile.widget.wlan import Wlan
 from libqtile.bar import Bar
 from colors import dracula
 from unicodes import (
@@ -18,10 +18,10 @@ bar = Bar([
         format=' %Y-%m-%d %H:%M %p'),
     right_half_circle(dracula['purple']),
     # Volumen
-    left_half_circle(dracula['comment']),
-    Volume(fmt='墳 {}',
-           background=dracula['comment']),
-    right_half_circle(dracula['comment']),
+    # left_half_circle(dracula['comment']),
+    # Volume(fmt='墳 {}',
+           # background=dracula['comment']),
+    # right_half_circle(dracula['comment']),
     Spacer(length=430),
     # Grupos de ventanas
     left_half_circle(dracula['backgroud']),
@@ -39,10 +39,10 @@ bar = Bar([
     Spacer(length=470),
     # Bateria
     # Internet
-    left_half_circle(dracula['selection']),
-    Wlan(background=dracula["selection"],
-         format=" {essid} {percent:2.0%}"),
-    right_half_circle(dracula['selection']),
+    # left_half_circle(dracula['selection']),
+    # Wlan(background=dracula["selection"],
+         # format=" {essid} {percent:2.0%}"),
+    # right_half_circle(dracula['selection']),
 ],
     background=dracula["backgroud"],
     opacity=0.9,
