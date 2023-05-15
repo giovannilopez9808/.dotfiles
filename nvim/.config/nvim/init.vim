@@ -74,6 +74,8 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-fugitive'
 " Tagbar
 Plug 'preservim/tagbar'
+"
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 lua require('configs')

@@ -99,7 +99,8 @@ autostart = [
     # scroll),
     # Backgroud
     # "optimus-manager --switch nvidia",
-    'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/call.png',
+    # 'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/call.png',
+    'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/rainden.jpg',
     # Transparency
     'picom &',
 ]

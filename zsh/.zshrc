@@ -11,6 +11,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.cluster
 #export PATH=$HOME"/.cargo/bin":$PATH
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -129,7 +130,7 @@ alias tag='git tag'
 alias newtag='git tag -a'
 alias merge="git merge"
 alias diff="git diff"
-alias python="ipython"
+alias python="python3"
 alias ls="exa --icons -l --no-filesize --no-permissions --no-user --time-style='long-iso' --sort extension" 
 alias switch="git switch"
 alias e="exit"
