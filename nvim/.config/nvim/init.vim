@@ -3,7 +3,7 @@ highlight Comment cterm=bold
 set tabstop=4 softtabstop=4
 filetype plugin indent on
 set clipboard=unnamedplus
-set encoding=utf-8
+set encoding=UTF-8
 set colorcolumn=80
 set regexpengine=1
 set wrap linebreak
@@ -11,6 +11,7 @@ set termguicolors
 set shiftwidth=4
 set laststatus=2
 set noerrorbells
+set scrolloff=20
 set smartindent
 set ignorecase
 set noswapfile
@@ -38,7 +39,7 @@ Plug 'preservim/nerdcommenter'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 " Icons
-Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 " Syntax
 Plug 'sheerun/vim-polyglot'
 " Change on lines
@@ -58,7 +59,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Vim
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'lazy': 'false'}
+Plug 'mhinz/neovim-remote'
 Plug 'sirver/ultisnips'
 " Undotre
 Plug 'mbbill/undotree'
@@ -76,6 +78,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/tagbar'
 "
 Plug 'junegunn/goyo.vim'
+"
+Plug 'tpope/vim-surround'
 call plug#end()
 
 lua require('configs')
@@ -91,10 +95,11 @@ let g:coc_global_extensions=[
 "let g:lightline = {
       "\ 'colorscheme': 'wombat',
       "\ }
- if !exists('g:airline_symbols')
+if !exists('g:airline_symbols')
     let g:airline_symbols = {}
-  endif
+endif
 let g:airline_theme="deus"
+"let g:airline_theme="dracula"
 let g:airline_powerline_fonts = 1
 let g:airline_symbols.linenr = '|'
 let g:airline_symbols.maxlinenr = ''
@@ -106,20 +111,38 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled=0
 " Tex settings
 let g:vimtex_quickfix_enabled = 0
+let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_ignore_filters = [
       \ 'Underfull',
       \ 'Overfull',
       \]
+let g:vimtex_latexmk_build_dir = "./build"
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_compiler_progname = "nvr"
 let mapleader=" "
-"let g:tex_flavor = "latex"
+let g:tex_flavor = "latex"
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:formatdef_latexindent = '"latexindent -"'
+let maplocalleader = ","
+let g:vimtex_compiler_latexmk = {
+        \ 'aux_dir' : 'build/',
+        \ 'out_dir' : '',
+        \ 'callback' : 1,
+        \ 'continuous' : 1,
+        \ 'executable' : 'latexmk',
+        \ 'hooks' : [],
+        \ 'options' : [
+        \   '-verbose',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
 " Autocomplete with a enter
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() :"<CR>"
 " Python path
 "let g:python3_host_prog="/usr/bin/python3"
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
@@ -146,6 +169,7 @@ nnoremap <silent> <Leader>+ :vertical resize +20<CR>
 nnoremap <silent> <Leader>- :vertical resize -20<CR>
 " Compile latex files
 nnoremap <silent>la :VimtexCompile<CR>
+autocmd FileType tex nnoremap <silent> <Enter> :VimtexView<CR>
 " Move lines
 nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
@@ -184,3 +208,6 @@ vnoremap <expr> <Down> (v:count == 0 ? 'gj' : 'j')
 vnoremap <expr> <Up> (v:count == 0 ? 'gk' : 'k')
 "
 nnoremap <S-h> :noh<CR>
+" latex jump to document
+"
+nmap n nzz 
