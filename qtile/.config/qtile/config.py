@@ -1,17 +1,32 @@
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from bar_transparent_rounded import bar
-from libqtile import layout, widget
-from groups import keys, super_key
+from bar_transparent_rounded import get_bar
+from layouts import get_layouts
 from libqtile.lazy import lazy
-from layouts import layouts
-from colors import dracula
+from libqtile.config import (
+    Screen,
+    Click,
+    Match,
+    Drag,
+)
+from libqtile import layout
 from os import system
-
+from groups import (
+    get_all_keys,
+    super_key,
+)
+from colors import (
+    get_dracula_theme,
+    get_keyboard_color,
+    get_wallpaper,
+)
 widget_defaults = dict(
-    font="MesloLGS NF",
+    font="MesloLGSNerdFont",
     fontsize=12,
     padding=1,
 )
+dracula = get_dracula_theme()
+layouts = get_layouts()
+keys = get_all_keys()
+bar = get_bar()
 extension_defaults = widget_defaults.copy()
 
 screens = [
@@ -80,6 +95,9 @@ hp = "SynPS/2 Synaptics TouchPad"
 tap = "libinput Tapping Enabled"
 scroll = "libinput Natural Scrolling Enabled"
 msi = "CUST0001:00 06CB:CDAD Touchpad"
+wallpaper_folder = "/home/altair/.dotfiles/qtile/.config/qtile/wallpapers/"
+character = get_wallpaper()
+color = get_keyboard_color()
 autostart = [
     # LATAM keys
     'setxkbmap latam',
@@ -100,7 +118,8 @@ autostart = [
     # Backgroud
     # "optimus-manager --switch nvidia",
     # 'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/call.png',
-    'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/rainden.jpg',
+    color,
+    f'feh --bg-fill {wallpaper_folder}{character}.jpg',
     # Transparency
     'picom &',
 ]
