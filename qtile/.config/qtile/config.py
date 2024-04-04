@@ -117,7 +117,7 @@ autostart = [
     # scroll),
     # Backgroud
     # "optimus-manager --switch nvidia",
-    # 'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/call.png',
+    # 'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/wallpapers/call.png',
     color,
     f'feh --bg-fill {wallpaper_folder}{character}.jpg',
     # Transparency

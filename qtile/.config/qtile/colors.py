@@ -6,7 +6,8 @@ def get_wallpaper() -> str:
     if 7 < today.hour < 19:
         character = "kazuha"
     else:
-        character = "raiden"
+        # character = "raiden"
+        character = "furina"
     return character
 
 
@@ -16,7 +17,10 @@ def get_keyboard_color() -> str:
     if 7 < today.hour < 19:
         color = f"{command} edf6f9"
     else:
-        color = f"{command} 343ed9"
+        # raiden
+        # color = f"{command} 343ed9"
+        # furina
+        color = f"{command} 3a86ff"
     return color
 
 
