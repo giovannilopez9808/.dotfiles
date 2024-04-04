@@ -1,4 +1,6 @@
+require("configs.packer")
 require("configs.telescope")
-require("configs.lspconfig")
+--require("configs.lspconfig")
+require("configs.remaps")
 --require("configs.devicons")
 --require("configs.nonicons")

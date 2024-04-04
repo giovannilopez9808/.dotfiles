@@ -11,7 +11,7 @@ set termguicolors
 set shiftwidth=4
 set laststatus=2
 set noerrorbells
-set scrolloff=20
+"set scrolloff=20
 set smartindent
 set ignorecase
 set noswapfile
