@@ -4,7 +4,8 @@ from datetime import datetime
 def get_wallpaper() -> str:
     today = datetime.today()
     if 7 < today.hour < 19:
-        character = "kazuha"
+        # character = "kazuha"
+        character = "arlecchino_2"
     else:
         # character = "raiden"
         character = "furina"
