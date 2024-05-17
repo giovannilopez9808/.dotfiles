@@ -1,5 +1,5 @@
 from libqtile.widget.groupbox import GroupBox
-from laptopbattery import LaptopBatteryWidget
+# from laptopbattery import LaptopBatteryWidget
 from libqtile.widget.spacer import Spacer
 from libqtile.widget.volume import Volume
 from libqtile.widget.clock import Clock
@@ -38,7 +38,7 @@ def get_bar() -> Bar:
             dracula['comment']
         ),
         Spacer(
-            length=610
+            length=430
         ),
         # Grupos de ventanas
         left_half_circle(
@@ -58,10 +58,10 @@ def get_bar() -> Bar:
             dracula['backgroud']
         ),
         Spacer(
-            length=675
+            length=460
         ),
         # Bateria
-        LaptopBatteryWidget(),
+        # LaptopBatteryWidget(),
         # Internet
         left_half_circle(
             dracula['selection']
@@ -74,8 +74,8 @@ def get_bar() -> Bar:
             dracula['selection']
         ),
     ],
-        background=dracula["backgroud"],
-        opacity=0.9,
-        size=20,
+    background=dracula["backgroud"],
+    opacity=0.9,
+    size=18,
     )
     return bar

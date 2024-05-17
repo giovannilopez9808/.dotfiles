@@ -1,4 +1,4 @@
-import = ["/home/altair/.config/alacritty/dracula.toml"]
+import = ["/home/skuld/.config/alacritty/dracula.toml"]
 
 [cursor]
 style = { shape="Beam", blinking="On" }

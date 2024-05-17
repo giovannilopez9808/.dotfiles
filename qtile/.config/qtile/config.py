@@ -20,8 +20,8 @@ from colors import (
 )
 widget_defaults = dict(
     font="MesloLGSNerdFont",
-    fontsize=12,
-    padding=1,
+    fontsize=9,
+    padding=0.5,
 )
 dracula = get_dracula_theme()
 layouts = get_layouts()
@@ -95,7 +95,7 @@ hp = "SynPS/2 Synaptics TouchPad"
 tap = "libinput Tapping Enabled"
 scroll = "libinput Natural Scrolling Enabled"
 msi = "CUST0001:00 06CB:CDAD Touchpad"
-wallpaper_folder = "/home/altair/.dotfiles/qtile/.config/qtile/wallpapers/"
+wallpaper_folder = "/home/skuld/.dotfiles/qtile/.config/qtile/wallpapers/"
 character = get_wallpaper()
 color = get_keyboard_color()
 autostart = [
@@ -103,18 +103,18 @@ autostart = [
     'setxkbmap latam',
     # Select with touchpad
     # Lenovo
-    xinput.format(msi,
-                  tap),
-    # HP
-    # xinput.format(hp,
+    # xinput.format(msi,
     # tap),
+    # HP
+    xinput.format(hp,
+                  tap),
     # # Natural scrolling
     # Lenovo
-    xinput.format(msi,
-                  scroll),
-    # HP
-    # xinput.format(hp,
+    # xinput.format(msi,
     # scroll),
+    # HP
+    xinput.format(hp,
+                  scroll),
     # Backgroud
     # "optimus-manager --switch nvidia",
     # 'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/wallpapers/call.png',
