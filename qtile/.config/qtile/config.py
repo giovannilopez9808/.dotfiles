@@ -99,6 +99,7 @@ wallpaper_folder = "/home/altair/.dotfiles/qtile/.config/qtile/wallpapers/"
 character = get_wallpaper()
 color = get_keyboard_color()
 autostart = [
+    "xrandr -s 1920x1080 -r 60",
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
@@ -121,7 +122,7 @@ autostart = [
     color,
     f'feh --bg-fill {wallpaper_folder}{character}.jpg',
     # Transparency
-    'picom &',
+    # 'picom &',
 ]
 
 for command in autostart:

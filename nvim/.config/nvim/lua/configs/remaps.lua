@@ -9,6 +9,11 @@ vim.keymap.set(
         "<leader>sy",
         ":PackerSync<CR>"
 )
+vim.keymap.set(
+        "n",
+        "<leader>s",
+        "/"
+)
 -- Nerd Comment
 vim.cmd(
         "nmap ++ <plug>NERDCommenterToggle\
