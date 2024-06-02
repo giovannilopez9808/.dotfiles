@@ -1,4 +1,5 @@
 from bar_transparent_rounded import get_bar
+from monitor_setup import set_monitors
 from layouts import get_layouts
 from libqtile.lazy import lazy
 from libqtile.config import (
@@ -98,8 +99,9 @@ msi = "CUST0001:00 06CB:CDAD Touchpad"
 wallpaper_folder = "/home/altair/.dotfiles/qtile/.config/qtile/wallpapers/"
 character = get_wallpaper()
 color = get_keyboard_color()
+monitor_setup = set_monitors()
 autostart = [
-    "xrandr -s 1920x1080 -r 60",
+    # "xrandr -s 1920x1080 -r 60",
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
@@ -118,8 +120,8 @@ autostart = [
     # scroll),
     # Backgroud
     # "optimus-manager --switch nvidia",
-    # 'feh --bg-fill /home/altair/.dotfiles/qtile/.config/qtile/wallpapers/call.png',
-    color,
+    monitor_setup,
+    # color,
     f'feh --bg-fill {wallpaper_folder}{character}.jpg',
     # Transparency
     # 'picom &',

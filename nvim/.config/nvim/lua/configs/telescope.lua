@@ -23,7 +23,7 @@ local options = {
       entry_prefix = "  ",
       initial_mode = "insert",
       selection_strategy = "reset",
-      sorting_strategy = "ascending",
+      --sorting_strategy = "ascending",
       layout_strategy = "horizontal",
       layout_config = {
          horizontal = {
@@ -44,6 +44,7 @@ local options = {
          "__pycache__", 
          "__pycache__/*",
          "^__pycache__/*",
+         "build/",
          "%.txt",
          "%.jpg",
          "%.png",
@@ -56,8 +57,10 @@ local options = {
          "%.xdv",
          "%.h5",
          "%.log",
+         "%.adx",
+         "%.synctex.gz"
       },
-      generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
+      --generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
       path_display = { "truncate" },
       winblend = 0,
       border = {},
