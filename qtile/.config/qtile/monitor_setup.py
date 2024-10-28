@@ -1,7 +1,7 @@
 from os import popen
 
 
-def set_monitors()->None:
+def set_monitors() -> None:
     output = popen('xrandr').readlines()
     output = "".join(output)
     words = output.split()
@@ -12,8 +12,6 @@ def set_monitors()->None:
     if count == 1:
         return "~/.monitor/home_monitor_off"
     return "~/.monitor/home_monitor_on"
-
-
 
 
 if __name__ == "__main__":

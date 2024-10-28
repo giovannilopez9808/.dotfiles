@@ -40,13 +40,12 @@ vim.cmd(
         let g:airline#extensions#hunks#enabled=0'
 )
 -- vimtex
-vim.g.vimtex_quickfix_enabled = 0
 vim.g.vimtex_quickfix_open_on_warning = 0
 vim.g.vimtex_quickfix_ignore_filters = {
         "Underfull",
         "Overfull"
 }
-vim.g.vimtex_quickfix_enabled = 0
+vim.g.vimtex_quickfix_enabled = 1
 vim.g.vimtex_latexmk_build_dir = "./build"
 vim.g.vimtex_view_general_viewer = "okular"
 vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"

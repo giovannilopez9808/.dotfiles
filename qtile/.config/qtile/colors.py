@@ -5,10 +5,12 @@ def get_wallpaper() -> str:
     today = datetime.today()
     if 7 < today.hour < 19:
         # character = "kazuha"
-        character = "arlecchino_2"
+        # character = "arlecchino_2"
+        character = "kurisu"
     else:
         # character = "raiden"
         character = "furina"
+    character = f"{character}.jpg"
     return character
 
 

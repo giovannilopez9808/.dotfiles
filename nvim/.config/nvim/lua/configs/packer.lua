@@ -77,4 +77,6 @@ return require('packer').startup(function(use)
   use 'junegunn/goyo.vim'
   -- Surround text
   use 'tpope/vim-surround'
+  -- Transparent
+  use 'xiyaowong/transparent.nvim'
 end)

@@ -148,6 +148,11 @@ _G.packer_plugins = {
     path = "/home/altair/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/altair/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   ultisnips = {
     loaded = true,
     path = "/home/altair/.local/share/nvim/site/pack/packer/start/ultisnips",

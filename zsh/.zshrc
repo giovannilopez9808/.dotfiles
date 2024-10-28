@@ -161,4 +161,5 @@ alias deletebranch="bash ~/.gitscripts/deletebranch"
 alias tensorflow="source ~/.venv/tensorflow/bin/activate"
 alias pytorch="source ~/.venv/pytorch/bin/activate"
 alias screenkey="screenkey -s small --opacity 0.1 -t 0.25"
+alias htop="htop -u $USER"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

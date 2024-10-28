@@ -38,7 +38,7 @@ local options = {
          height = 0.80,
          preview_cutoff = 100,
       },
-      file_sorter = require("telescope.sorters").get_fuzzy_file,
+      --file_sorter = require("telescope.sorters").get_fuzzy_file,
       file_ignore_patterns = {
          "./__pycache__/*", 
          "__pycache__", 

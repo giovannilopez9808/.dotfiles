@@ -75,8 +75,8 @@ def get_bar() -> Bar:
                 dracula['selection']
             ),
         ],
-    background=dracula["backgroud"],
-    opacity=0.9,
-    size=20,
+        background=dracula["backgroud"],
+        opacity=0.9,
+        size=20,
     )
     return bar

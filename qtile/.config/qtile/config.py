@@ -9,6 +9,7 @@ from libqtile.config import (
     Drag,
 )
 from libqtile import layout
+from os.path import join
 from os import system
 from groups import (
     get_all_keys,
@@ -96,12 +97,16 @@ hp = "SynPS/2 Synaptics TouchPad"
 tap = "libinput Tapping Enabled"
 scroll = "libinput Natural Scrolling Enabled"
 msi = "CUST0001:00 06CB:CDAD Touchpad"
-wallpaper_folder = "/home/altair/.dotfiles/qtile/.config/qtile/wallpapers/"
+wallpaper_folder = "/home/altair/.dotfiles/qtile/.config/qtile/wallpapers"
 character = get_wallpaper()
 color = get_keyboard_color()
 monitor_setup = set_monitors()
+wallpaper_path = join(
+    wallpaper_folder,
+    character,
+)
 autostart = [
-    # "xrandr -s 1920x1080 -r 60",
+    "xrandr -s 1920x1080 -r 60",
     # LATAM keys
     'setxkbmap latam',
     # Select with touchpad
@@ -122,9 +127,10 @@ autostart = [
     # "optimus-manager --switch nvidia",
     monitor_setup,
     # color,
-    f'feh --bg-fill {wallpaper_folder}{character}.jpg',
+    f'feh --bg-fill {wallpaper_path}',
+    # f'feh --bg-fill {wallpaper_folder}/call.png',
     # Transparency
-    # 'picom &',
+    'picom &',
 ]
 
 for command in autostart:
