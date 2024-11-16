@@ -32,6 +32,11 @@ action = "SpawnNewInstance"
 key = "N"
 mods = "Control"
 
+[[keyboard.bindings]]
+chars = "\x0c"
+key = "I"
+mods = "Control"
+
 [mouse]
 hide_when_typing = true
 
