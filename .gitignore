@@ -2,3 +2,4 @@
 autoload/
 plugged/
 undotree/
+__pycache__/
