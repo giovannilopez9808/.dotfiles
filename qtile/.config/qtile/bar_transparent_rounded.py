@@ -1,9 +1,7 @@
 from libqtile.widget.groupbox import GroupBox
-from laptopbattery import LaptopBatteryWidget
 from libqtile.widget.spacer import Spacer
 from libqtile.widget.volume import Volume
 from libqtile.widget.clock import Clock
-from libqtile.widget.wlan import Wlan
 from colors import get_dracula_theme
 from libqtile.bar import Bar
 from unicodes import (
@@ -60,19 +58,6 @@ def get_bar() -> Bar:
             ),
             Spacer(
                 length=670
-            ),
-            # Bateria
-            LaptopBatteryWidget(),
-            # Internet
-            left_half_circle(
-                dracula['selection']
-            ),
-            Wlan(
-                background=dracula["selection"],
-                format="  {essid} {percent:2.0%}"
-            ),
-            right_half_circle(
-                dracula['selection']
             ),
         ],
         background=dracula["backgroud"],
