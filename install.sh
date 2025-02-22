@@ -22,6 +22,7 @@ ln -s $HOME/.dotfiles/pip/.config/pip/pip.conf $HOME/.config/pip/pip.conf
 # pylint
 ln -s $HOME/.dotfiles/pylint/.pylintrc $HOME/.pylintrc
 # fastfetch
+mkdir -p $HOME/.config/fastfetch
 ln -s $HOME/.dotfiles/fastfetch/.config/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
 # gtk
 ln -s $HOME/.dotfiles/gtk/.config/gtk-3.0/settings.ini $HOME/.config/gtk-3.0/settings.ini

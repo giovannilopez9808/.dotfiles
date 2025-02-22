@@ -53,8 +53,9 @@ return require('packer').startup(function(use)
   use 'mhinz/vim-signify'
   -- CoC
   use {
-    'neoclide/coc.nvim',
-    run = "npm ci"
+   'neoclide/coc.nvim',
+    branch = "master",
+    run = "npm ci",
   }
   -- Airline
   use 'vim-airline/vim-airline'
