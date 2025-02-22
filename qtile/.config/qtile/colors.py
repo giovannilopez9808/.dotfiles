@@ -7,6 +7,7 @@ def get_wallpaper() -> str:
         # character = "kazuha"
         # character = "arlecchino_2"
         character = "kurisu"
+        character = "furina"
     else:
         # character = "raiden"
         character = "furina"
