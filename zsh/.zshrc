@@ -163,3 +163,25 @@ alias pytorch="source ~/.venv/pytorch/bin/activate"
 alias screenkey="screenkey -s small --opacity 0.1 -t 0.25"
 alias htop="htop -u $USER"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/altair/.google-cloud-sdk/path.zsh.inc' ]; then . '/home/altair/.google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/altair/.google-cloud-sdk/completion.zsh.inc' ]; then . '/home/altair/.google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/altair/.miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/altair/.miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/altair/.miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/altair/.miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

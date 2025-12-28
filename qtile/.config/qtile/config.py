@@ -127,8 +127,8 @@ autostart = [
     # "optimus-manager --switch nvidia",
     monitor_setup,
     # color,
-    f'feh --bg-fill {wallpaper_path}',
-    # f'feh --bg-fill {wallpaper_folder}/call.png',
+    # f'feh --bg-fill {wallpaper_path}',
+    f'feh --bg-fill {wallpaper_folder}/call.png',
     # Transparency
     'picom &',
 ]

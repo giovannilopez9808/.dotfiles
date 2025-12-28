@@ -72,10 +72,11 @@ vim.cmd(
 )
 -- CoC
 vim.g.coc_global_extensions = {
-        "coc-python",
+        --"coc-python",
         "coc-vimtex",
         "coc-markdownlint",
-        "coc-json"
+        "coc-json",
+        "coc-pyright"
 }
 vim.cmd(
         'nmap <silent> gg <Plug>(coc-definition)'
