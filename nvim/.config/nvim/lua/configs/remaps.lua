@@ -39,6 +39,7 @@ vim.cmd(
         let g:airline#extensions#branch#enabled = 1\
         let g:airline#extensions#hunks#enabled=0'
 )
+--vim.g.python3_host_prog="/usr/bin/python3"
 -- vimtex
 vim.g.vimtex_quickfix_open_on_warning = 0
 vim.g.vimtex_quickfix_ignore_filters = {
@@ -72,7 +73,8 @@ vim.cmd(
 )
 -- CoC
 vim.g.coc_global_extensions = {
-        "coc-python",
+        --"coc-python",
+        "coc-pyright",
         "coc-vimtex",
         "coc-markdownlint",
         "coc-json"

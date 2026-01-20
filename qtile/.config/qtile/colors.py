@@ -7,10 +7,10 @@ def get_wallpaper() -> str:
         # character = "kazuha"
         # character = "arlecchino_2"
         character = "kurisu"
-        character = "furina"
+        character = "furina2"
     else:
         # character = "raiden"
-        character = "furina"
+        character = "furina2"
     character = f"{character}.jpg"
     return character
 

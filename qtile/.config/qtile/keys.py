@@ -192,12 +192,12 @@ def get_keys() -> list:
         Key([super_key],
             "f",
             lazy.spawn("thunar"),),
-        Key([super_key, "shift"],
+        Key(["control", "shift"],
             "Print",
             lazy.spawn(
             f"{ss_command} 'xclip -selection clipboard -t image/png -i $f && rm *.png'")
             ),
-        Key([super_key],
+        Key(["control"],
             "Print",
             lazy.spawn(f"{ss_command} 'mv *.png ~/Pictures/'")),
         Key([super_key],

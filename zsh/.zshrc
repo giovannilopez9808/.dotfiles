@@ -144,3 +144,29 @@ alias deletebranch="bash ~/.gitscripts/deletebranch"
 alias screenkey="screenkey -s small --opacity 0.1 -t 0.25"
 alias htop="htop -u $USER"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init - zsh)"
+DIR=/home/amadeus/.wrf_dependencies/wrf_dependencies
+export NETCDF=$DIR/netcdf
+export LD_LIBRARY_PATH=$NETCDF/lib:$DIR/grib2/lib
+export PATH=$NETCDF/bin:$DIR/mpich/bin:${PATH}
+export JASPERLIB=$DIR/grib2/lib
+export JASPERINC=$DIR/grib2/include
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/amadeus/.miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/amadeus/.miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/amadeus/.miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/amadeus/.miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+conda deactivate
+

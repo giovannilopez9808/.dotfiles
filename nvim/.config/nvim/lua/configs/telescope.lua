@@ -58,7 +58,9 @@ local options = {
          "%.h5",
          "%.log",
          "%.adx",
-         "%.synctex.gz"
+         "%.synctex.gz",
+         "%.mp4",
+         "%.o"
       },
       --generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
       path_display = { "truncate" },
